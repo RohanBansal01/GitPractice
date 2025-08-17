@@ -1,0 +1,117 @@
+
+---
+
+# `basic-commands/` – Line-by-Line Git Commands with Explanation
+
+````markdown
+# Basic Git Commands – Step by Step
+
+## 1. Configure Git
+```bash
+git config --global user.name "Your Name"  
+# Sets your Git username globally; commits will show this name
+
+git config --global user.email "you@example.com"  
+# Sets your Git email globally; commits will show this email
+````
+
+## 2. Initialize a Repository
+
+```bash
+git init  
+# Creates a new Git repository in the current folder
+# Starts tracking changes in this project
+```
+
+## 3. Check Repository Status
+
+```bash
+git status  
+# Shows which files are staged, unstaged, or untracked
+```
+
+## 4. Add Changes to Staging
+
+```bash
+git add <filename>  
+# Stages a specific file to include in the next commit
+
+git add .  
+# Stages all changed and new files in the repository
+```
+
+## 5. Commit Changes
+
+```bash
+git commit -m "Initial commit"  
+# Records the staged changes in the repository with a descriptive message
+```
+
+## 6. View Commit History
+
+```bash
+git log  
+# Shows detailed history of commits including SHA, author, date, and message
+
+git log --oneline  
+# Shows a concise one-line summary of commits for easier viewing
+```
+
+## 7. Clone a Repository
+
+```bash
+git clone https://github.com/username/repo.git  
+# Copies an existing Git repository from GitHub to your local machine
+```
+
+## 8. View Differences
+
+```bash
+git diff  
+# Shows changes made in files that are not yet staged for commit
+```
+
+## 9. Remove a File from Staging
+
+```bash
+git reset <filename>  
+# Unstages a file that was added with git add
+```
+
+## 10. Remove a File from Working Directory
+
+```bash
+git rm <filename>  
+# Deletes a file from the repository and stages the deletion
+```
+
+## 11. Rename a File
+
+```bash
+git mv oldname.txt newname.txt  
+# Renames a file and stages the change for commit
+```
+
+## 12. Show Changes for a Specific Commit
+
+```bash
+git show <commit-hash>  
+# Displays what changed in a particular commit
+```
+
+## 13. Undo Last Commit (Keep Changes)
+
+```bash
+git reset --soft HEAD~1  
+# Moves HEAD back by one commit, but keeps the changes staged
+```
+
+## 14. Undo Last Commit (Discard Changes)
+
+```bash
+git reset --hard HEAD~1  
+# Moves HEAD back by one commit and discards all changes
+```
+
+```
+
