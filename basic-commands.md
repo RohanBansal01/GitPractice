@@ -338,8 +338,4 @@ This diagram **clearly shows how each command changes the repo state**:
 
 ---
 
-If you want, I can **make a colored visual diagram image** (like a flowchart) that you can include in your GitPractice README to make it beginner-friendly.
-
-Do you want me to create that image?
-
 
