@@ -1,5 +1,3 @@
-
-
 1. **Line-by-line Git commands for rebasing**,
 2. **Explanations for each command**,
 3. **Visual diagram showing how commits are rewritten during rebase**.
