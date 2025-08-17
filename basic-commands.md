@@ -1,6 +1,4 @@
 
----
-
 # `basic-commands/` – Line-by-Line Git Commands with Explanation
 
 ````markdown
