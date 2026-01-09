@@ -182,6 +182,3 @@ Commit History:
 * `apply` restores changes but keeps stash
 * `pop` restores changes and removes stash
 * Stashes do NOT affect commit history
-
-```
-
