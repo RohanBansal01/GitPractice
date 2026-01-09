@@ -1,5 +1,3 @@
-
-``
 # Git Rebase – Step by Step
 
 This guide explains **Git rebasing** with:
@@ -192,11 +190,6 @@ main
   *
   | Feature commit 1'
 ```
-
----
-
-
----
 
 ## 🧠 Rebase vs Merge (One Line)
 
