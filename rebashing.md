@@ -1,5 +1,5 @@
 
-````markdown
+``
 # Git Rebase – Step by Step
 
 This guide explains **Git rebasing** with:
