@@ -70,10 +70,11 @@ git rebase -i HEAD~2
 ```
 
 ---
-
+```
 ## **Visual Diagram – Git Rebase**
 
 ### **Step 0: Initial Commit**
+```
 ```
 
 main (HEAD)
@@ -81,8 +82,9 @@ main (HEAD)
 * Initial commit
 
 ```
-
+```
 ### **Step 1: Feature Branch Created**
+```
 ```
 
 main
@@ -92,8 +94,9 @@ main
 feature-branch (HEAD)
 
 ```
-
+```
 ### **Step 2: Commits in Feature Branch**
+```
 ```
 
 main
@@ -106,8 +109,9 @@ feature-branch (HEAD)
 * Feature commit 1
 
 ```
-
+```
 ### **Step 3: Commit in Main**
+```
 ```
 
 main (HEAD)
@@ -121,8 +125,9 @@ feature-branch
 * Feature commit 1
 
 ```
-
+```
 ### **Step 4: Rebase Feature onto Main**
+```
 ```
 
 main
@@ -136,7 +141,7 @@ feature-branch (HEAD)
 * Feature commit 2'
 
 ```
-
+```
 **Explanation:**  
 - Commits from `feature-branch` are **rebased on top of main**.  
 - Original feature commits are replaced with new commits (`1'` and `2'`) for linear history.  
