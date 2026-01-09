@@ -1,136 +1,187 @@
-1. **Line-by-line Git stash commands**,
-2. **Explanations for each command**,
-3. **Visual diagram showing how stashes temporarily save changes**.
+# Git Stash – Step by Step
+
+This guide explains how **Git stash** temporarily saves uncommitted work,
+allowing you to switch context without committing unfinished changes.
 
 ---
 
-# **`stashing/stashing.md` – Git Stash Examples**
-
-````markdown
-# Git Stash – Step by Step
-
 ## 1️⃣ Make Changes in Working Directory
+
 ```bash
 echo "Temporary work" >> temp.txt
 git status
-# Shows temp.txt is modified/untracked
 ````
+
+**Explanation:**
+
+* Modifies `temp.txt`
+* `git status` shows uncommitted changes in the working directory
+
+---
 
 ## 2️⃣ Save Changes to Stash
 
 ```bash
 git stash
-# Saves all uncommitted changes (staged or unstaged) and cleans working directory
-# Now working directory matches HEAD commit
 ```
+
+**Explanation:**
+
+* Saves all uncommitted changes (staged + unstaged)
+* Resets working directory to match the last commit (`HEAD`)
+* Changes are stored safely in a stash stack
+
+---
 
 ## 3️⃣ List Stashes
 
 ```bash
 git stash list
-# Shows all stashes saved with unique identifiers like stash@{0}, stash@{1}, etc.
 ```
+
+**Explanation:**
+
+* Displays all saved stashes
+* Each stash has an identifier like `stash@{0}`, `stash@{1}`
+
+---
 
 ## 4️⃣ Apply Last Stash
 
 ```bash
 git stash apply
-# Applies the latest stash changes back to working directory
-# Stash is not deleted
 ```
+
+**Explanation:**
+
+* Restores the most recent stash
+* Stash remains in the list (not deleted)
+
+---
 
 ## 5️⃣ Apply a Specific Stash
 
 ```bash
 git stash apply stash@{0}
-# Applies a specific stash from the list
 ```
+
+**Explanation:**
+
+* Applies a specific stash by index
+* Useful when multiple stashes exist
+
+---
 
 ## 6️⃣ Pop Stash (Apply + Remove)
 
 ```bash
 git stash pop
-# Applies the last stash and removes it from the stash list
 ```
+
+**Explanation:**
+
+* Applies the latest stash
+* Removes it from the stash list
+
+---
 
 ## 7️⃣ Drop a Stash
 
 ```bash
 git stash drop stash@{0}
-# Deletes a specific stash without applying it
 ```
+
+**Explanation:**
+
+* Deletes a specific stash
+* Does NOT apply its changes
+
+---
 
 ## 8️⃣ Clear All Stashes
 
 ```bash
 git stash clear
-# Removes all saved stashes
 ```
 
-```
+**Explanation:**
+
+* Removes all stashes permanently
+* Use with caution
 
 ---
 
-## **Visual Diagram – Git Stash**
+# 📊 Visual Diagram – Git Stash
 
-### **Step 0: Working Directory Modified**
+## Step 0: Working Directory Modified
+
 ```
-
 Working Directory:
 ├── temp.txt (modified)
 
 Staging Area: empty
+
 Commit History:
-
 * Initial commit
-
 ```
-
-### **Step 1: git stash**
-```
-
-Working Directory: clean (no changes)
-Staging Area: empty
-Stash:
-
-* stash@{0} – contains temp.txt changes
-  Commit History:
-* Initial commit
-
-```
-
-### **Step 2: git stash apply**
-```
-
-Working Directory:
-├── temp.txt (changes restored)
-Staging Area: empty
-Stash:
-
-* stash@{0} remains
-  Commit History:
-* Initial commit
-
-```
-
-### **Step 3: git stash pop**
-```
-
-Working Directory:
-├── temp.txt (changes restored)
-Staging Area: empty
-Stash: empty
-Commit History:
-
-* Initial commit
-
-```
-
-**Explanation:**  
-- `git stash` is useful to **temporarily save changes** without committing.  
-- You can switch branches or perform other tasks safely.  
-- `apply` restores changes without removing the stash; `pop` restores and removes it.
 
 ---
 
+## Step 1: After `git stash`
+
+```
+Working Directory: clean
+Staging Area: empty
+
+Stash:
+* stash@{0} → temp.txt changes
+
+Commit History:
+* Initial commit
+```
+
+---
+
+## Step 2: After `git stash apply`
+
+```
+Working Directory:
+├── temp.txt (changes restored)
+
+Staging Area: empty
+
+Stash:
+* stash@{0} still exists
+
+Commit History:
+* Initial commit
+```
+
+---
+
+## Step 3: After `git stash pop`
+
+```
+Working Directory:
+├── temp.txt (changes restored)
+
+Staging Area: empty
+
+Stash: empty
+
+Commit History:
+* Initial commit
+```
+
+---
+
+## 🧠 Key Takeaways
+
+* `git stash` temporarily saves work without committing
+* Ideal for quick context switching
+* `apply` restores changes but keeps stash
+* `pop` restores changes and removes stash
+* Stashes do NOT affect commit history
+
+```
 
