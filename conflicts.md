@@ -1,9 +1,3 @@
-
----
-
-## `conflicts/conflicts.md`**
-
-````markdown
 # Git Merge Conflicts – Step by Step
 
 This guide explains how **merge conflicts occur**, how to **resolve them**, and
@@ -232,20 +226,5 @@ main (HEAD)
 * Git never guesses — humans resolve conflicts
 * Conflict markers guide manual resolution
 * Resolution is recorded as a merge commit
-
-```
-
----
-
-### 🔑 Senior-level mental model (1 line)
-
-> **A merge conflict is Git asking you to be the source of truth.**
-
-If you want next, I can add:
-- Rebase conflicts vs merge conflicts
-- Conflict resolution using VS Code / IntelliJ
-- `git rerere` (reuse recorded resolutions)
-- Best practices teams follow to avoid conflicts
-
 
 ```
