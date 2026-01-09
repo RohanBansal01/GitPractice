@@ -1,19 +1,26 @@
-1. **Line-by-line Git commands for rebasing**,
-2. **Explanations for each command**,
-3. **Visual diagram showing how commits are rewritten during rebase**.
-
----
-
-# **`rebasing/rebasing.md` – Git Rebase Examples**
 
 ````markdown
 # Git Rebase – Step by Step
 
+This guide explains **Git rebasing** with:
+- Exact commands
+- What each command does
+- How commit history is rewritten
+
+---
+
 ## 1️⃣ Create a Feature Branch
+
 ```bash
 git checkout -b feature-branch
-# Creates and switches to 'feature-branch' in one step
 ````
+
+**Explanation:**
+
+* Creates a new branch named `feature-branch`
+* Switches to it immediately
+
+---
 
 ## 2️⃣ Make Commits in Feature Branch
 
@@ -21,130 +28,179 @@ git checkout -b feature-branch
 echo "Feature commit 1" >> feature.txt
 git add feature.txt
 git commit -m "Feature commit 1"
+```
 
+```bash
 echo "Feature commit 2" >> feature.txt
 git add feature.txt
 git commit -m "Feature commit 2"
 ```
 
-## 3️⃣ Switch to Main and Make Commit
+**Explanation:**
+
+* Two commits are created on `feature-branch`
+* These commits exist only on the feature branch
+
+---
+
+## 3️⃣ Switch to Main and Make a Commit
 
 ```bash
 git checkout main
+```
+
+```bash
 echo "Main commit 1" >> main.txt
 git add main.txt
 git commit -m "Main commit 1"
 ```
+
+**Explanation:**
+
+* `main` advances independently
+* Now `main` and `feature-branch` have diverged
+
+---
 
 ## 4️⃣ Rebase Feature Branch onto Main
 
 ```bash
 git checkout feature-branch
 git rebase main
-# Reapplies feature commits on top of latest main commit
 ```
 
-## 5️⃣ Resolve Conflicts (if any)
+**Explanation:**
+
+* Git takes feature commits
+* Replays them **on top of the latest `main`**
+* Commit hashes are rewritten
+
+---
+
+## 5️⃣ Resolve Conflicts (If Any)
 
 ```bash
-# Edit conflicting files, then:
+# Fix conflicts manually, then:
 git add <file>
 git rebase --continue
-# Repeat until rebase finishes
 ```
 
-## 6️⃣ Abort Rebase
+**Explanation:**
+
+* Resolve conflicts file by file
+* Continue rebasing until finished
+
+---
+
+## 6️⃣ Abort a Rebase
 
 ```bash
 git rebase --abort
-# Cancels rebase and restores branch to original state
 ```
+
+**Explanation:**
+
+* Cancels the rebase
+* Restores branch to its original state
+
+---
 
 ## 7️⃣ Interactive Rebase
 
 ```bash
 git rebase -i HEAD~2
-# Opens editor to squash, reorder, or edit last 2 commits
 ```
 
+**Explanation:**
+
+* Opens an editor
+* Lets you `pick`, `squash`, `reword`, or `drop` commits
+* Used for cleaning history before merge
+
+---
+
+# 📊 Visual Diagram – Git Rebase
+
+## Step 0: Initial State
+
+```
+main (HEAD)
+*
+| Initial commit
 ```
 
 ---
-```
-## **Visual Diagram – Git Rebase**
 
-### **Step 0: Initial Commit**
-```
-```
-
-main (HEAD)
-
-* Initial commit
+## Step 1: Feature Branch Created
 
 ```
-```
-### **Step 1: Feature Branch Created**
-```
-```
-
 main
-
-* Initial commit
-
-feature-branch (HEAD)
-
+*
+| Initial commit
+ \
+  feature-branch (HEAD)
 ```
-```
-### **Step 2: Commits in Feature Branch**
-```
-```
-
-main
-
-* Initial commit
-
-feature-branch (HEAD)
-
-* Feature commit 2
-* Feature commit 1
-
-```
-```
-### **Step 3: Commit in Main**
-```
-```
-
-main (HEAD)
-
-* Main commit 1
-* Initial commit
-
-feature-branch
-
-* Feature commit 2
-* Feature commit 1
-
-```
-```
-### **Step 4: Rebase Feature onto Main**
-```
-```
-
-main
-
-* Main commit 1
-* Initial commit
-
-feature-branch (HEAD)
-
-* Feature commit 1'
-* Feature commit 2'
-
-```
-```
-**Explanation:**  
-- Commits from `feature-branch` are **rebased on top of main**.  
-- Original feature commits are replaced with new commits (`1'` and `2'`) for linear history.  
-- Keeps history cleaner compared to a merge commit.  
 
 ---
+
+## Step 2: Commits on Feature Branch
+
+```
+main
+*
+| Initial commit
+ \
+  feature-branch (HEAD)
+  *
+  | Feature commit 2
+  *
+  | Feature commit 1
+```
+
+---
+
+## Step 3: Commit on Main
+
+```
+main (HEAD)
+*
+| Main commit 1
+*
+| Initial commit
+ \
+  feature-branch
+  *
+  | Feature commit 2
+  *
+  | Feature commit 1
+```
+
+---
+
+## Step 4: After Rebase (History Rewritten)
+
+```
+main
+*
+| Main commit 1
+*
+| Initial commit
+ \
+  feature-branch (HEAD)
+  *
+  | Feature commit 2'
+  *
+  | Feature commit 1'
+```
+
+---
+
+
+---
+
+## 🧠 Rebase vs Merge (One Line)
+
+> **Rebase rewrites history for clarity; merge preserves history for safety.**
+
+```
+
