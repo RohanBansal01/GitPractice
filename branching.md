@@ -1,6 +1,8 @@
 
 ##  `branching/branching.md`
 
+<img width="1921" height="1057" alt="image" src="https://github.com/user-attachments/assets/54d9b2aa-bced-432c-991b-336938af203d" />
+
 ````markdown
 ````
 # Git Branching & Merging – Step by Step
