@@ -28,6 +28,8 @@ This guide explains **how to create, review, and approve Pull Requests** the way
 14. Common PR Mistakes
 15. Do’s and Don’ts (Golden Rules)
 16. Final PR Review Mental Model
+    
+<img width="640" height="366" alt="image" src="https://github.com/user-attachments/assets/aa199013-adc5-42b4-8979-e8941ee2b9f5" />
 
 ---
 
