@@ -24,10 +24,13 @@ This repository is designed to help users:
 GitPractice/
 │
 ├── basic-commands/        # Examples of basic Git commands
+├── git-workflow/        # About how git works
+├── Git Internals/         # About how the internal of git works
 ├── branching/             # Branch creation, merging, and workflow examples
 ├── rebasing/              # Rebase exercises and examples
 ├── stashing/              # Examples using Git stash
 ├── conflicts/             # Handling merge conflicts examples
+├── Disaster-Management/   # How to handel Disaster in Git
 ├── README.md              # This file
 └── LICENSE                # MIT License
 ```
