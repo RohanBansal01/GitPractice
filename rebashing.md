@@ -28,7 +28,8 @@ This guide explains **Git rebasing** in depth:
 12. Resolving a Rebase Conflict  
 13. Aborting a Rebase  
 14. Common Mistakes  
-15. Best Practices & Final Mental Model  
+15. Best Practices & Final Mental Model
+16. Rebase Failure Mode 
 
 ---
 
@@ -260,8 +261,42 @@ git rebase --abort
 ✔ Rebase only local feature branches  
 ✔ Rebase before PR, not after  
 ✔ Use merge for shared branches  
-✔ Use interactive rebase for cleanup  
+✔ Use interactive rebase for cleanup
 
+Below is a **concise summary of the Medium article**, followed by **one additional point added to your “Git Rebase – Step by Step” guide**, written in the same technical style.
+
+---
+## **1️⃣6️⃣ Rebase Failure Mode — “Rebase Hell” (Why Merge Sometimes Wins)**
+
+Rebase can turn a **single logical conflict** into **many sequential conflicts** because Git replays commits **one-by-one**, not end-state-to-end-state.
+
+**Why this happens:**
+
+* Merge compares **final branch states**
+* Rebase compares **every intermediate commit**
+* Fixes in later commits are **unknown during earlier conflict resolution**
+
+**Result:**
+
+* Repeated manual conflict resolution
+* Higher risk of human error
+* Massive time waste
+* Increased chance of broken code
+
+> **Mental Model:**
+> Merge resolves *what matters*.
+> Rebase replays *everything*, even mistakes that were already fixed.
+
+**Rule of Thumb:**
+
+* ✔ Use **merge** when branches diverged significantly
+* ✔ Use **rebase** only for short-lived, local, clean feature branches
+* ❌ Never rebase to “fix” collaboration problems
+
+<img width="500" height="750" alt="image" src="https://github.com/user-attachments/assets/2c8913ea-9a93-4fe1-b127-050dcd872d07" />
+
+
+---
 ### Final Mental Model
 
 > **Rebase rewrites time. Merge records reality.  
@@ -270,5 +305,6 @@ git rebase --abort
 ---
 
 ## 🧠 One-Line Summary
+<img width="300" height="168" alt="image" src="https://github.com/user-attachments/assets/d03c5356-8b88-43e2-a5bc-66d9b3beb9e6" />
 
 > **Rebase makes history cleaner, but mistakes permanent — respect it.**
