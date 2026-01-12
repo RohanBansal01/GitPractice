@@ -78,6 +78,10 @@ These documents explain:
 > Understanding PR reviews and engineering foundations is **mandatory** for real-world Git usage.
 
 
+
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/d4ffabc6-9b5f-499d-9e86-853baa9e9b7e" />
+
+
 ---
 
 ## ⚡ Installation & Setup
