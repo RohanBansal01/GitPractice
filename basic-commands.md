@@ -1,8 +1,7 @@
 # Basic Git Commands – Complete Guide (Mental Model First)
 
 This document explains **basic Git commands line by line**, how they affect the **working directory, staging area, and commit history**, and how everything fits together in a **real developer workflow**.
-
-<img width="1024" height="785" alt="image" src="https://github.com/user-attachments/assets/3194ce0a-089f-43ba-a978-347783dd5c7c" />
+<img width="481" height="455" alt="image" src="https://github.com/user-attachments/assets/3e9c416e-cd0c-4bdb-90dc-4dc148e6dd54" />
 
 ---
 
