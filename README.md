@@ -23,6 +23,7 @@ This repository helps you:
 
 ## 🗂 Repository Structure
 
+```
 GitPractice/
 │
 ├── gitpractice-roadmap/  # Roadmap for how to follow this repo
