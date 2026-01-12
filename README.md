@@ -26,6 +26,10 @@ This repository helps you:
 ```
 GitPractice/
 │
+├── docs/
+│   ├── pull-request-guidelines.md       # PR rules &  workflow
+│   ├── engineering-vocabulary.md        # Industry terms / Git vocabulary
+│   └── engineering-foundations.md       # Ownership, production mindset, incident handling, etc.
 ├── gitpractice-roadmap/  # Roadmap for how to follow this repo
 ├── basic-commands/       # Core Git commands and fundamentals
 ├── git-workflow/         # How Git workflows operate in real projects
@@ -46,7 +50,7 @@ GitPractice/
 
 ## 🧪 Code Reviews & Collaboration
 
-This repository follows **real-world pull request and code review practices** used in professional teams.
+This repository follows **real-world pull request, code review, and engineering practices** used in professional teams.
 
 Before contributing, please review:
 
@@ -58,13 +62,19 @@ Before contributing, please review:
   `docs/engineering-vocabulary.md`  
   (Common industry terms every Git/GitHub user should know)
 
-These documents explain:
-- How PR reviews work in teams
-- What reviewers expect
-- How to give and receive feedback professionally
-- Common mistakes to avoid
+- 🏗 **Engineering Foundations**  
+  `docs/engineering-foundations.md`  
+  (Ownership, production mindset, incident handling, rollback strategies, trade-offs)
 
-> Understanding PR reviews is **mandatory** for real-world Git usage.
+These documents explain:
+
+- How PR reviews work in teams  
+- What reviewers expect  
+- How to give and receive feedback professionally  
+- How to think like a senior engineer in real-world projects  
+- How to handle incidents, rollbacks, and production issues  
+
+> Understanding PR reviews and engineering foundations is **mandatory** for real-world Git usage.
 
 
 ---
