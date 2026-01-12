@@ -23,9 +23,9 @@ This repository helps you:
 
 ## 🗂 Repository Structure
 
-```
-GitPractice/
+```GitPractice/
 │
+├── gitpractice-roadmap/  # Roadmap for how to follow this repo
 ├── basic-commands/       # Core Git commands and fundamentals
 ├── git-workflow/         # How Git workflows operate in real projects
 ├── git-internals/        # How Git works internally (objects, refs, HEAD)
@@ -36,6 +36,7 @@ GitPractice/
 ├── disaster-recovery/    # Recovering from Git mistakes and failures
 ├── README.md             # Project documentation
 └── LICENSE               # MIT License
+
 ```
 
 > Folder names are intentionally **lowercase and hyphenated** for consistency and cross-platform compatibility.
