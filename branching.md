@@ -2,6 +2,7 @@
 ##  `branching/branching.md`**
 
 ````markdown
+````
 # Git Branching & Merging – Step by Step
 
 This document is a **team-ready guide** covering:
