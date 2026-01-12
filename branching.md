@@ -409,4 +409,7 @@ git rebase --abort
 
 ## 🧠 Final Mental Model
 
+<img width="218" height="231" alt="image" src="https://github.com/user-attachments/assets/d1dd88c9-89ca-400d-afa9-53d91155c6ad" />
+
+
 > **Branches are pointers, commits are immutable, merges reconcile truth, and CI enforces discipline.**
