@@ -324,6 +324,8 @@ feature-branch (HEAD)
 ❌ Forgetting `git add` after resolving
 ❌ Rebasing shared branches
 ❌ Auto-resolving without understanding
+<img width="481" height="494" alt="image" src="https://github.com/user-attachments/assets/1283ccee-0f9d-442d-b5d8-4753f3419b21" />
+
 
 ---
 
