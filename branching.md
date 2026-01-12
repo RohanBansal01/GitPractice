@@ -1,4 +1,3 @@
----
 
 ##  `branching/branching.md`**
 
@@ -405,6 +404,3 @@ git rebase --abort
 ## 🧠 Final Mental Model
 
 > **Branches are pointers, commits are immutable, merges reconcile truth, and CI enforces discipline.**
-
-```
-
