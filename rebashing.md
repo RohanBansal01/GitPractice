@@ -6,7 +6,10 @@ This guide explains **Git rebasing** in depth:
 - How conflicts occur and are resolved
 - When rebasing is safe vs dangerous
 
-https://git.impa.br/help/topics/git/img/git_rebase_v13_5.png
+<img width="2742" height="1257" alt="image" src="https://github.com/user-attachments/assets/aa34bcaa-7335-49ae-9f55-12523682d97b" />
+<img width="633" height="656" alt="image" src="https://github.com/user-attachments/assets/4968c8b9-cf0c-45e8-86d2-6bba3fedcd48" />
+
+
 ---
 
 ## 📌 Index
