@@ -1,5 +1,5 @@
 
-##  `branching/branching.md`**
+##  `branching/branching.md`
 
 ````markdown
 ````
