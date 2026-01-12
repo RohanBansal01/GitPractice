@@ -1,4 +1,4 @@
-# Engineering Foundations – Senior-Level Operating Guide
+# Engineering Foundations - Github
 
 This document explains the **non-negotiable engineering fundamentals** that go beyond Git commands and PR mechanics.
 
