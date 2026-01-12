@@ -5,6 +5,8 @@ This guide explains **how to create, review, and approve Pull Requests** the way
 PR reviews are **not about control**.
 They are about **code quality, shared ownership, and long-term safety**.
 
+<img width="725" height="800" alt="image" src="https://github.com/user-attachments/assets/6d4e0998-26f0-4c7c-b758-42c72b3443b8" />
+
 ---
 
 ## 📚 Index
