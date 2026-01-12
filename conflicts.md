@@ -1,8 +1,7 @@
----
-
 ##  `conflicts/conflicts.md`**
 
 ````markdown
+````
 # Git Merge & Rebase Conflicts – Step by Step
 
 This guide explains:
@@ -337,4 +336,3 @@ feature-branch (HEAD)
 > **A conflict is Git asking you to choose the source of truth.
 > Git never guesses — humans decide.**
 
-```
