@@ -282,6 +282,9 @@ git stash clear
 > **Stash is a temporary drawer —  
 > commits are permanent shelves.**
 
+<img width="500" height="659" alt="image" src="https://github.com/user-attachments/assets/b5d947be-649f-4655-b44a-03b2d5bb2f6b" />
+
+
 ---
 
 ## 🧠 One-Line Summary
