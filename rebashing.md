@@ -45,6 +45,8 @@ Instead of merging histories, Git:
 
 ## 2️⃣ Rebase vs Merge (Conceptual Difference)
 
+<img width="259" height="194" alt="image" src="https://github.com/user-attachments/assets/4f980b32-281b-4b54-9287-2231a7828551" />
+
 | Merge | Rebase |
 |-----|-------|
 | Preserves history | Rewrites history |
