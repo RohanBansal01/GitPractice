@@ -48,6 +48,9 @@ git branch
 * `*` marks the active branch
 * Default branch is usually `main`
 
+<img width="275" height="184" alt="image" src="https://github.com/user-attachments/assets/3000020f-c43f-4b12-ad38-7b79fb2d97d5" />
+
+
 ---
 
 ## 2️⃣ Create a New Branch
