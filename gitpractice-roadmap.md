@@ -4,6 +4,9 @@ This roadmap is designed to take you from **Git beginner → confident team cont
 
 The goal is not memorizing commands, but **understanding what Git is doing and how to recover when things go wrong**.
 
+<img width="600" height="428" alt="image" src="https://github.com/user-attachments/assets/6d0ce931-1661-4da4-b523-0d3c95c02656" />
+
+
 ---
 
 ## 🟢 Level 1: Foundations (Beginner)
