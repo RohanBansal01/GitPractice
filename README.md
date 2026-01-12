@@ -23,7 +23,7 @@ This repository helps you:
 
 ## 🗂 Repository Structure
 
-```GitPractice/
+GitPractice/
 │
 ├── gitpractice-roadmap/  # Roadmap for how to follow this repo
 ├── basic-commands/       # Core Git commands and fundamentals
