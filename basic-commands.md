@@ -251,6 +251,9 @@ Repeat continuously.
 
 ## 1️⃣5️⃣ Final Mental Model
 
+<img width="275" height="183" alt="image" src="https://github.com/user-attachments/assets/c989894e-95f9-4edf-a8a2-edb200b6fa59" />
+
+
 Think of Git as:
 
 ```
