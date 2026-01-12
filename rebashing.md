@@ -1,26 +1,81 @@
 # Git Rebase – Step by Step
 
-This guide explains **Git rebasing** with:
-- Exact commands
-- What each command does
-- How commit history is rewritten
+This guide explains **Git rebasing** in depth:
+- How history diverges
+- How rebase rewrites commits
+- How conflicts occur and are resolved
+- When rebasing is safe vs dangerous
+
+https://git.impa.br/help/topics/git/img/git_rebase_v13_5.png
+---
+
+## 📌 Index
+
+1. What Is Git Rebase  
+2. Rebase vs Merge (Conceptual Difference)  
+3. When Rebasing Is Used  
+4. Creating a Feature Branch  
+5. Making Commits on Feature Branch  
+6. Advancing `main` Independently  
+7. Triggering a Rebase  
+8. What Happens During Rebase (Internals)  
+9. Visual Diagram – Before Rebase  
+10. Visual Diagram – After Rebase  
+11. Real Rebase Conflict Scenario  
+12. Resolving a Rebase Conflict  
+13. Aborting a Rebase  
+14. Common Mistakes  
+15. Best Practices & Final Mental Model  
 
 ---
 
-## 1️⃣ Create a Feature Branch
+## 1️⃣ What Is Git Rebase
+
+**Rebase** moves your commits and **replays them on top of another branch**.
+
+Instead of merging histories, Git:
+- Temporarily removes your commits
+- Updates your branch to latest base
+- Re-applies your commits one by one
+
+---
+
+## 2️⃣ Rebase vs Merge (Conceptual Difference)
+
+| Merge | Rebase |
+|-----|-------|
+| Preserves history | Rewrites history |
+| Adds merge commit | No merge commit |
+| Safe for shared branches | Dangerous if misused |
+| Non-linear graph | Linear history |
+
+> **Merge records what happened. Rebase pretends it happened later.**
+
+---
+
+## 3️⃣ When Rebasing Is Used
+
+✔ Clean feature branch before PR  
+✔ Keep linear commit history  
+✔ Update feature branch with latest `main`  
+❌ Never rebase shared / pushed branches  
+
+---
+
+## 4️⃣ Create a Feature Branch
 
 ```bash
 git checkout -b feature-branch
-````
+```
 
 **Explanation:**
-
-* Creates a new branch named `feature-branch`
-* Switches to it immediately
+- Creates `feature-branch`
+- Switches to it immediately
+- Base is current `main`
 
 ---
 
-## 2️⃣ Make Commits in Feature Branch
+## 5️⃣ Make Commits on Feature Branch
 
 ```bash
 echo "Feature commit 1" >> feature.txt
@@ -35,13 +90,12 @@ git commit -m "Feature commit 2"
 ```
 
 **Explanation:**
-
-* Two commits are created on `feature-branch`
-* These commits exist only on the feature branch
+- Two commits exist only on `feature-branch`
+- `main` remains unchanged
 
 ---
 
-## 3️⃣ Switch to Main and Make a Commit
+## 6️⃣ Advance Main Independently
 
 ```bash
 git checkout main
@@ -54,13 +108,12 @@ git commit -m "Main commit 1"
 ```
 
 **Explanation:**
-
-* `main` advances independently
-* Now `main` and `feature-branch` have diverged
+- `main` now has new commits
+- Branch histories diverge
 
 ---
 
-## 4️⃣ Rebase Feature Branch onto Main
+## 7️⃣ Trigger the Rebase
 
 ```bash
 git checkout feature-branch
@@ -68,96 +121,29 @@ git rebase main
 ```
 
 **Explanation:**
-
-* Git takes feature commits
-* Replays them **on top of the latest `main`**
-* Commit hashes are rewritten
-
----
-
-## 5️⃣ Resolve Conflicts (If Any)
-
-```bash
-# Fix conflicts manually, then:
-git add <file>
-git rebase --continue
-```
-
-**Explanation:**
-
-* Resolve conflicts file by file
-* Continue rebasing until finished
+- Git finds the common ancestor
+- Temporarily removes feature commits
+- Replays them on top of latest `main`
+- **Commit hashes change**
 
 ---
 
-## 6️⃣ Abort a Rebase
+## 8️⃣ What Happens During Rebase (Internals)
 
-```bash
-git rebase --abort
+Internally Git does:
+
+```
+1. Save feature commits
+2. Move branch pointer to main
+3. Re-apply commits one by one
+4. Create NEW commits
 ```
 
-**Explanation:**
-
-* Cancels the rebase
-* Restores branch to its original state
+Old commits become **orphaned**.
 
 ---
 
-## 7️⃣ Interactive Rebase
-
-```bash
-git rebase -i HEAD~2
-```
-
-**Explanation:**
-
-* Opens an editor
-* Lets you `pick`, `squash`, `reword`, or `drop` commits
-* Used for cleaning history before merge
-
----
-
-# 📊 Visual Diagram – Git Rebase
-
-## Step 0: Initial State
-
-```
-main (HEAD)
-*
-| Initial commit
-```
-
----
-
-## Step 1: Feature Branch Created
-
-```
-main
-*
-| Initial commit
- \
-  feature-branch (HEAD)
-```
-
----
-
-## Step 2: Commits on Feature Branch
-
-```
-main
-*
-| Initial commit
- \
-  feature-branch (HEAD)
-  *
-  | Feature commit 2
-  *
-  | Feature commit 1
-```
-
----
-
-## Step 3: Commit on Main
+## 9️⃣ Visual Diagram – Before Rebase
 
 ```
 main (HEAD)
@@ -175,7 +161,7 @@ main (HEAD)
 
 ---
 
-## Step 4: After Rebase (History Rewritten)
+## 🔟 Visual Diagram – After Rebase (History Rewritten)
 
 ```
 main
@@ -191,9 +177,93 @@ main
   | Feature commit 1'
 ```
 
-## 🧠 Rebase vs Merge (One Line)
+⚠️ Apostrophe (`'`) means **new commit hash**
 
-> **Rebase rewrites history for clarity; merge preserves history for safety.**
+---
 
+## 1️⃣1️⃣ Real Rebase Conflict Scenario
+
+Conflict occurs when:
+- Same file
+- Same lines
+- Modified in both branches
+
+Example:
+```bash
+git rebase main
 ```
 
+❌ Conflict in `feature.txt`
+
+---
+
+## 1️⃣2️⃣ Resolving a Rebase Conflict
+
+Open the conflicted file:
+
+```text
+<<<<<<< HEAD
+Main branch change
+=======
+Feature branch change
+>>>>>>> Feature commit
+```
+
+### Resolve manually:
+
+```text
+Main branch change
+Feature branch change
+```
+
+Then continue:
+
+```bash
+git add feature.txt
+git rebase --continue
+```
+
+Repeat until all commits are replayed.
+
+---
+
+## 1️⃣3️⃣ Abort a Rebase
+
+```bash
+git rebase --abort
+```
+
+**Explanation:**
+- Cancels the entire rebase
+- Restores branch to original state
+- No history damage
+
+---
+
+## 1️⃣4️⃣ Common Mistakes
+
+❌ Rebasing pushed branches  
+❌ Rebasing `main` or `develop`  
+❌ Force-pushing without team agreement  
+❌ Using rebase to “fix” broken commits  
+
+---
+
+## 1️⃣5️⃣ Best Practices & Final Mental Model
+
+### Best Practices
+✔ Rebase only local feature branches  
+✔ Rebase before PR, not after  
+✔ Use merge for shared branches  
+✔ Use interactive rebase for cleanup  
+
+### Final Mental Model
+
+> **Rebase rewrites time. Merge records reality.  
+> Use rebase for clarity, merge for collaboration.**
+
+---
+
+## 🧠 One-Line Summary
+
+> **Rebase makes history cleaner, but mistakes permanent — respect it.**
