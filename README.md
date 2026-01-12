@@ -26,7 +26,7 @@ This repository helps you:
 ```
 GitPractice/
 │
-├── basic-commands/        # Core Git commands and fundamentals
+├── basic-commands/       # Core Git commands and fundamentals
 ├── git-workflow/         # How Git workflows operate in real projects
 ├── git-internals/        # How Git works internally (objects, refs, HEAD)
 ├── branching/            # Branch creation, merging strategies, workflows
