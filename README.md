@@ -44,6 +44,31 @@ GitPractice/
 
 ---
 
+## 🧪 Code Reviews & Collaboration
+
+This repository follows **real-world pull request and code review practices** used in professional teams.
+
+Before contributing, please review:
+
+- 📄 **Pull Request Guidelines**  
+  `docs/pull-request-guidelines.md`  
+  (How to create PRs, review code, approvals, do’s & don’ts)
+
+- 🧠 **Engineering Vocabulary**  
+  `docs/engineering-vocabulary.md`  
+  (Common industry terms every Git/GitHub user should know)
+
+These documents explain:
+- How PR reviews work in teams
+- What reviewers expect
+- How to give and receive feedback professionally
+- Common mistakes to avoid
+
+> Understanding PR reviews is **mandatory** for real-world Git usage.
+
+
+---
+
 ## ⚡ Installation & Setup
 
 1. Clone the repository:
