@@ -1,11 +1,12 @@
-# Pull Request (PR) Reviews 
+# GitHub Pull Request (PR) Guide: Templates + Reviews
 
-This guide explains **how to create, review, and approve Pull Requests** the way **experienced engineers do in real teams**.
+This guide explains **how to create, review, and approve Pull Requests** the way **experienced engineers do in real teams**. It combines **PR templates** with **senior-level review practices**.
 
-PR reviews are **not about control**.
-They are about **code quality, shared ownership, and long-term safety**.
+> **PR reviews are not about control.**
+> They are about **code quality, shared ownership, and long-term safety**.
 
-<img width="725" height="800" alt="image" src="https://github.com/user-attachments/assets/6d4e0998-26f0-4c7c-b758-42c72b3443b8" />
+<img width="725" height="800" alt="image" src="https://github.com/user-attachments/assets/994fa061-275c-478d-a73d-f08ea783826e" />
+
 
 ---
 
@@ -16,16 +17,17 @@ They are about **code quality, shared ownership, and long-term safety**.
 3. When to Open a PR
 4. Size of a Good PR
 5. Writing a Good PR Description
-6. What Reviewers Actually Look For
-7. Code Review vs Design Review
-8. How to Review Code (Step-by-Step)
-9. Commenting Style (How Seniors Comment)
-10. Approving a PR
-11. When to Request Changes
-12. Handling Disagreements
-13. Common PR Mistakes
-14. Do’s and Don’ts (Golden Rules)
-15. Final PR Review Mental Model
+6. GitHub PR Templates
+7. What Reviewers Actually Look For
+8. Code Review vs Design Review
+9. How to Review Code (Step-by-Step)
+10. Commenting Style (How Seniors Comment)
+11. Approving a PR
+12. When to Request Changes
+13. Handling Disagreements
+14. Common PR Mistakes
+15. Do’s and Don’ts (Golden Rules)
+16. Final PR Review Mental Model
 
 ---
 
@@ -98,7 +100,7 @@ A good PR description answers:
 * **How was it tested?**
 * **Any risks or follow-ups?**
 
-Template:
+Example template:
 
 ```md
 ### What
@@ -114,27 +116,79 @@ Implementation approach
 Tests / manual steps
 ```
 
-If reviewers need to read code to understand intent — the PR failed.
+> If reviewers need to read code to understand intent — the PR failed.
 
 ---
 
-## 6️⃣ What Reviewers Actually Look For
+## 6️⃣ GitHub PR Templates
+
+Pull Request Templates make PRs **consistent, clear, and easy to review**.
+
+### Benefits
+
+* **Consistency:** All PRs follow the same format
+* **Clarity:** Guidance on what info to include
+* **Efficiency:** Checklists reduce back-and-forth
+* **Onboarding:** New developers quickly learn your process
+
+### How to Create a Template
+
+1. Add a file `PULL_REQUEST_TEMPLATE.md` under `.github/`
+2. Push to your default branch
+3. GitHub auto-applies it for new PRs
+
+### Suggested Template
+
+```md
+## Summary
+<!-- Short summary "Why are the changes needed"? Include links (Jira, Slack, design docs) -->
+
+## Changes Made
+<!-- Describe the specific changes and approach -->
+
+## Checklist
+- [ ] Added comments to complex code
+- [ ] Updated documentation
+- [ ] No new warnings generated
+- [ ] Added tests for fixes/features
+- [ ] Dependent changes merged downstream
+
+<details>
+<summary>Optional Sections</summary>
+
+## Screenshots
+<!-- Visual changes if applicable -->
+
+## Related Issues
+<!-- Link issues or bugs addressed -->
+
+## Testing Instructions
+<!-- How to test changes -->
+
+## Special Notes for Reviewer
+<!-- Any specific instructions or considerations -->
+
+</details>
+```
+
+---
+
+## 7️⃣ What Reviewers Actually Look For
 
 Senior reviewers check:
 
 * Correctness
 * Edge cases
-* Readability
-* Naming
+* Readability & naming
 * Architecture fit
 * Tests
 * Impact on existing code
 
-They do **not** nitpick style endlessly.
+They **do not** nitpick style endlessly.
 
 ---
 
-## 7️⃣ Code Review vs Design Review
+## 8️⃣ Code Review vs Design Review
 
 **Code Review**:
 
@@ -148,14 +202,11 @@ They do **not** nitpick style endlessly.
 * Is this the right abstraction?
 * Will this scale?
 
-Mixing them causes frustration.
-Call out design concerns explicitly.
+> Mix them carefully—call out design concerns explicitly.
 
 ---
 
-## 8️⃣ How to Review Code (Step-by-Step)
-
-Senior workflow:
+## 9️⃣ How to Review Code (Step-by-Step)
 
 1. Read PR description
 2. Understand intent
@@ -164,11 +215,11 @@ Senior workflow:
 5. Review edge cases
 6. Review tests last
 
-Never start line-by-line without context.
+> Never start line-by-line without context.
 
 ---
 
-## 9️⃣ Commenting Style (How Seniors Comment)
+## 🔟 Commenting Style (How Seniors Comment)
 
 Good comments are:
 
@@ -177,16 +228,12 @@ Good comments are:
 * Specific
 * Actionable
 
-Examples:
-
 ✅ “This may fail when X is null — can we guard it?”
 ❌ “This is wrong.”
 
-Tone matters. Written words carry weight.
-
 ---
 
-## 🔟 Approving a PR
+## 1️⃣1️⃣ Approving a PR
 
 Approve when:
 
@@ -194,33 +241,25 @@ Approve when:
 * Risks are understood
 * Trade-offs are acceptable
 
-Approval does **not** mean:
-
-* “Perfect”
-* “I would write it this way”
-
-It means:
-
-> **Safe enough to ship.**
+> Approval does **not** mean perfect.
+> It means **safe enough to ship**.
 
 ---
 
-## 1️⃣1️⃣ When to Request Changes
+## 1️⃣2️⃣ When to Request Changes
 
 Request changes if:
 
-* There is a correctness bug
-* There is a security issue
-* There is a design violation
-* Tests are missing where required
+* Correctness bug exists
+* Security issue exists
+* Design violation
+* Missing tests
 
-Be explicit about **blocking vs non-blocking** feedback.
+> Be explicit about **blocking vs non-blocking** feedback.
 
 ---
 
-## 1️⃣2️⃣ Handling Disagreements
-
-Disagreements are normal.
+## 1️⃣3️⃣ Handling Disagreements
 
 Senior behavior:
 
@@ -229,11 +268,11 @@ Senior behavior:
 * Prefer data over opinion
 * Escalate design decisions early
 
-Never argue style endlessly.
+> Never argue style endlessly.
 
 ---
 
-## 1️⃣3️⃣ Common PR Mistakes
+## 1️⃣4️⃣ Common PR Mistakes
 
 ❌ Huge PRs
 ❌ No description
@@ -244,7 +283,7 @@ Never argue style endlessly.
 
 ---
 
-## 1️⃣4️⃣ Do’s and Don’ts (Golden Rules)
+## 1️⃣5️⃣ Do’s and Don’ts (Golden Rules)
 
 ### ✅ DO
 
@@ -264,13 +303,13 @@ Never argue style endlessly.
 
 ---
 
-## 1️⃣5️⃣ Final PR Review Mental Model
+## 1️⃣6️⃣ Final PR Review Mental Model
 
-> **PRs are conversations, not gatekeeping.
+> **PRs are conversations, not gatekeeping.**
 > Reviews protect the codebase, not egos.
-> Shared code means shared responsibility.**
+> Shared code means shared responsibility.
 
-A strong PR culture creates **strong teams**.
+> A strong PR culture creates **strong teams**.
 
 ---
 
