@@ -1,8 +1,14 @@
-##  `conflicts/conflicts.md`**
+##  `conflicts/conflicts.md`
+
+<img width="219" height="230" alt="image" src="https://github.com/user-attachments/assets/3c0e837f-3650-4b56-aca9-b24850c2486c" />
+
 
 ````markdown
 ````
 # Git Merge & Rebase Conflicts – Step by Step
+
+<img width="1502" height="994" alt="image" src="https://github.com/user-attachments/assets/fb6bfc50-51d8-4d36-8b42-3683262facc3" />
+
 
 This guide explains:
 - Why conflicts happen
@@ -332,6 +338,9 @@ feature-branch (HEAD)
 ---
 
 ## 🧠 Final Mental Model
+
+<img width="219" height="230" alt="image" src="https://github.com/user-attachments/assets/d9417d3c-6395-435b-8294-49408ecb5229" />
+
 
 > **A conflict is Git asking you to choose the source of truth.
 > Git never guesses — humans decide.**
