@@ -84,6 +84,26 @@ These documents explain:
 
 ---
 
+## ❓ Common Confusion: Git vs GitHub vs GitLab
+
+Many people confuse **Git**, **GitHub**, and **GitLab**.  
+This repository focuses primarily on **Git**, while demonstrating how it is used with platforms like GitHub and GitLab.
+
+| Tool | What it is |
+|----|----|
+| **Git** | A distributed version control system (runs locally) |
+| **GitHub** | A hosting & collaboration platform for Git |
+| **GitLab** | A DevOps platform built around Git |
+
+> **Git manages history.  
+> GitHub manages collaboration.  
+> GitLab manages the software lifecycle.**
+
+If you understand **Git deeply**, switching between GitHub, GitLab, or any future tool becomes trivial.
+
+
+---
+
 ## ⚡ Installation & Setup
 
 1. Clone the repository:
