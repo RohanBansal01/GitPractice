@@ -7,7 +7,7 @@ This is the **language used daily** in code reviews, standups, PRs, and incident
 
 ---
 
-## 📚 Index (15-Point Model)
+## 📚 Index 
 
 1. Purpose of This Document
 2. File Naming (Industry-Standard)
