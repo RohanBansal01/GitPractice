@@ -6,6 +6,7 @@
 **GitPractice** is a hands-on repository for learning, practicing, and mastering **Git and GitHub**, from fundamentals to advanced, real-world workflows.
 
 This repo focuses on **how Git actually works**, not just commands.
+<img width="731" height="500" alt="image" src="https://github.com/user-attachments/assets/4ef88315-a424-4b72-afd8-a03ea133ffda" />
 
 ---
 
