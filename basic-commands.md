@@ -1,341 +1,264 @@
+# Basic Git Commands – Complete Guide (Mental Model First)
 
-# `basic-commands/` – Line-by-Line Git Commands with Explanation
+This document explains **basic Git commands line by line**, how they affect the **working directory, staging area, and commit history**, and how everything fits together in a **real developer workflow**.
 
-````markdown
-# Basic Git Commands – Step by Step
+---
 
-## 1. Configure Git
-```bash
-git config --global user.name "Your Name"  
-# Sets your Git username globally; commits will show this name
+## 📚 Index
 
-git config --global user.email "you@example.com"  
-# Sets your Git email globally; commits will show this email
-````
+1. What Git Is Tracking (Core Areas)
+2. Initial Git Configuration
+3. Creating a Repository
+4. Repository Status Explained
+5. Adding Files to Staging
+6. Committing Changes
+7. Viewing Commit History
+8. Understanding `git diff`
+9. Undoing Staging (`git reset`)
+10. Removing & Renaming Files
+11. Inspecting a Commit
+12. Undoing Commits (Soft vs Hard)
+13. End‑to‑End Local Workflow
+14. Common Beginner Mistakes
+15. Final Mental Model
 
-## 2. Initialize a Repository
+---
 
-```bash
-git init  
-# Creates a new Git repository in the current folder
-# Starts tracking changes in this project
+## 1️⃣ What Git Is Tracking (Core Areas)
+
+Git always works with **three areas**:
+
+```
+Working Directory → Staging Area → Commit History
 ```
 
-## 3. Check Repository Status
+• **Working Directory**: Actual files on your disk
+• **Staging Area (Index)**: Files prepared for commit
+• **Commit History**: Snapshots stored permanently
+
+Every Git command moves changes **between these areas**.
+
+---
+
+## 2️⃣ Initial Git Configuration
 
 ```bash
-git status  
-# Shows which files are staged, unstaged, or untracked
-```
-
-## 4. Add Changes to Staging
-
-```bash
-git add <filename>  
-# Stages a specific file to include in the next commit
-
-git add .  
-# Stages all changed and new files in the repository
-```
-
-## 5. Commit Changes
-
-```bash
-git commit -m "Initial commit"  
-# Records the staged changes in the repository with a descriptive message
-```
-
-## 6. View Commit History
-
-```bash
-git log  
-# Shows detailed history of commits including SHA, author, date, and message
-
-git log --oneline  
-# Shows a concise one-line summary of commits for easier viewing
-```
-
-## 7. Clone a Repository
-
-```bash
-git clone https://github.com/username/repo.git  
-# Copies an existing Git repository from GitHub to your local machine
-```
-
-## 8. View Differences
-
-```bash
-git diff  
-# Shows changes made in files that are not yet staged for commit
-```
-
-## 9. Remove a File from Staging
-
-```bash
-git reset <filename>  
-# Unstages a file that was added with git add
-```
-
-## 10. Remove a File from Working Directory
-
-```bash
-git rm <filename>  
-# Deletes a file from the repository and stages the deletion
-```
-
-## 11. Rename a File
-
-```bash
-git mv oldname.txt newname.txt  
-# Renames a file and stages the change for commit
-```
-
-## 12. Show Changes for a Specific Commit
-
-```bash
-git show <commit-hash>  
-# Displays what changed in a particular commit
-```
-
-## 13. Undo Last Commit (Keep Changes)
-
-```bash
-git reset --soft HEAD~1  
-# Moves HEAD back by one commit, but keeps the changes staged
-```
-
-## 14. Undo Last Commit (Discard Changes)
-
-```bash
-git reset --hard HEAD~1  
-# Moves HEAD back by one commit and discards all changes
-```
-
-
-
-
-
-
-#!/bin/bash
-
-# ===============================
-# Basic Git Commands Script
-# ===============================
-
-echo "1️⃣ Configure Git Username and Email"
-echo "Setting global username and email..."
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
-echo "✅ Username and email configured"
-echo
+```
 
-echo "2️⃣ Initialize a new Git repository"
+**What happens?**
+• Sets identity for all future commits
+• Required before creating commits
+
+*No repo changes yet.*
+
+---
+
+## 3️⃣ Creating a Repository
+
+```bash
 git init
-echo "✅ Repository initialized"
-echo
+```
 
-echo "3️⃣ Check repository status"
+**What happens?**
+• Creates a hidden `.git/` folder
+• Git starts tracking this directory
+
+```
+Working Directory: files
+Staging Area: empty
+Commit History: empty
+```
+
+---
+
+## 4️⃣ Repository Status Explained
+
+```bash
 git status
-echo
+```
 
-echo "4️⃣ Add a file to staging area"
-echo "Creating a sample file..."
-echo "Hello Git" > sample.txt
-git add sample.txt
-echo "✅ sample.txt added to staging"
-git status
-echo
+**What happens?**
+• Shows file state transitions
+• Answers: What changed? What is staged? What is untracked?
 
-echo "5️⃣ Commit changes"
-git commit -m "Initial commit"
-echo "✅ Changes committed"
-git log --oneline
-echo
+Key states:
+• Untracked
+• Modified
+• Staged
 
-echo "6️⃣ Make changes and view differences"
-echo "Appending a new line..."
-echo "Another line" >> sample.txt
-git diff
-echo
+---
 
-echo "7️⃣ Add all changes and commit again"
+## 5️⃣ Adding Files to Staging
+
+```bash
+git add <file>
 git add .
-git commit -m "Added another line to sample.txt"
-echo "✅ Changes committed"
+```
+
+**What happens?**
+• Copies file snapshot into staging area
+• Does NOT create a commit
+
+```
+Working Directory → Staging Area
+```
+
+---
+
+## 6️⃣ Committing Changes
+
+```bash
+git commit -m "message"
+```
+
+**What happens?**
+• Takes staged snapshot
+• Stores it permanently in history
+
+```
+Staging Area → Commit History
+```
+
+After commit, staging becomes empty.
+
+---
+
+## 7️⃣ Viewing Commit History
+
+```bash
+git log
 git log --oneline
-echo
+```
 
-echo "8️⃣ Rename the file"
-git mv sample.txt renamed_sample.txt
-git commit -m "Renamed sample.txt to renamed_sample.txt"
-echo "✅ File renamed and committed"
-git log --oneline
-echo
+**What happens?**
+• Displays commit DAG (history graph)
+• Each commit = full snapshot
 
-echo "9️⃣ Remove the file"
-git rm renamed_sample.txt
-git commit -m "Removed renamed_sample.txt"
-echo "✅ File removed"
-git log --oneline
-echo
+---
 
-echo "🔹 Script completed! You have practiced basic Git commands step by step."
+## 8️⃣ Understanding `git diff`
 
+```bash
+git diff
+```
 
-
-
-
-
-
-
-
-
-## **Git Repo Visual Flow – `basic-commands.sh`**
-
-### **Step 0: Before `git init`**
+**What happens?**
+• Shows differences between:
 
 ```
-Working Directory:
-├── (empty)
+Working Directory ↔ Staging Area
+```
 
-Staging Area: empty
-Commit History: empty
+Use it to **review changes before staging**.
+
+---
+
+## 9️⃣ Undoing Staging (`git reset`)
+
+```bash
+git reset <file>
+```
+
+**What happens?**
+• Removes file from staging
+• Keeps file unchanged locally
+
+```
+Staging Area → Working Directory
 ```
 
 ---
 
-### **Step 1: `git init`**
+## 🔟 Removing & Renaming Files
 
+```bash
+git rm <file>
+git mv old new
 ```
-Working Directory:
-├── (empty)
-└── .git/   # Hidden Git directory created
 
-Staging Area: empty
-Commit History: empty
-```
+**What happens?**
+• File deletion/rename is staged automatically
+• Requires commit to finalize
+
+Git tracks **content changes**, not filenames.
 
 ---
 
-### **Step 2: Create `sample.txt` and `git add sample.txt`**
+## 1️⃣1️⃣ Inspecting a Commit
 
+```bash
+git show <commit>
 ```
-Working Directory:
-├── sample.txt
 
-Staging Area:
-├── sample.txt
-
-Commit History: empty
-```
+**What happens?**
+• Displays exact changes introduced
+• Useful for debugging history
 
 ---
 
-### **Step 3: `git commit -m "Initial commit"`**
+## 1️⃣2️⃣ Undoing Commits
 
+### Soft Reset
+
+```bash
+git reset --soft HEAD~1
 ```
-Working Directory:
-├── sample.txt
 
-Staging Area: empty
+• Removes commit
+• Keeps changes staged
 
-Commit History:
-* Initial commit
-  └ sample.txt content: "Hello Git"
+### Hard Reset
+
+```bash
+git reset --hard HEAD~1
 ```
+
+• Removes commit
+• Deletes changes permanently ⚠️
 
 ---
 
-### **Step 4: Append line + `git diff`**
+## 1️⃣3️⃣ End‑to‑End Local Workflow
 
 ```
-Working Directory:
-├── sample.txt (modified)
-      "Hello Git"
-      "Another line"
-
-Staging Area: empty
-
-Commit History:
-* Initial commit
+Edit file
+↓
+git diff
+↓
+git add
+↓
+git commit
+↓
+git log
 ```
 
-`git diff` shows the added line `"Another line"`.
+Repeat continuously.
 
 ---
 
-### **Step 5: `git add .` + `git commit -m "Added another line"`**
+## 1️⃣4️⃣ Common Beginner Mistakes
 
-```
-Working Directory:
-├── sample.txt
-
-Staging Area: empty
-
-Commit History:
-* Added another line
-  └ sample.txt content: "Hello Git" + "Another line"
-* Initial commit
-```
+• Forgetting `git add` before commit
+• Using `--hard` without understanding
+• Editing files during conflicts blindly
+• Thinking Git stores diffs (it stores snapshots)
 
 ---
 
-### **Step 6: `git mv sample.txt renamed_sample.txt` + commit**
+## 1️⃣5️⃣ Final Mental Model
+
+Think of Git as:
 
 ```
-Working Directory:
-├── renamed_sample.txt
-
-Staging Area: empty
-
-Commit History:
-* Renamed sample.txt to renamed_sample.txt
-  └ File renamed
-* Added another line
-  └ sample.txt content: "Hello Git" + "Another line"
-* Initial commit
+A timeline of snapshots
 ```
 
----
+• You edit files freely
+• You stage intentionally
+• You commit deliberately
 
-### **Step 7: `git rm renamed_sample.txt` + commit**
-
-```
-Working Directory:
-├── (empty)
-
-Staging Area: empty
-
-Commit History:
-* Removed renamed_sample.txt
-* Renamed sample.txt to renamed_sample.txt
-* Added another line
-* Initial commit
-```
+If you understand **where your change is**, you understand Git.
 
 ---
-
-### ✅ **Summary of Repo Changes**
-
-| Step | Action                        | Working Dir         | Staging Area | Commit History                                 |
-| ---- | ----------------------------- | ------------------- | ------------ | ---------------------------------------------- |
-| 0    | Before `git init`             | empty               | empty        | empty                                          |
-| 1    | `git init`                    | empty               | empty        | empty                                          |
-| 2    | `git add sample.txt`          | sample.txt          | sample.txt   | empty                                          |
-| 3    | `git commit "Initial commit"` | sample.txt          | empty        | Initial commit                                 |
-| 4    | Modify file + `git diff`      | sample.txt(mod)     | empty        | Initial commit                                 |
-| 5    | `git add .` + `git commit`    | sample.txt          | empty        | Initial + Added another line                   |
-| 6    | `git mv` + commit             | renamed\_sample.txt | empty        | Initial + Added another line + Rename          |
-| 7    | `git rm` + commit             | empty               | empty        | Initial + Added another line + Rename + Remove |
-
----
-
-This diagram **clearly shows how each command changes the repo state**:
-
-* **Working Directory:** Your actual files on disk.
-* **Staging Area (Index):** Files staged for commit.
-* **Commit History:** Snapshots of the repository.
-
----
-
-
