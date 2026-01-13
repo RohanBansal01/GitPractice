@@ -41,8 +41,8 @@ This document is a **team-ready guide** covering:
 
 
 ---
-
-## View Current Branch 🔹
+<a id="view-current-branch"></a>
+## 1️⃣ View Current Branch
 
 ```bash
 git branch
@@ -379,23 +379,21 @@ git rebase --abort
 ---
 
 # ⚠️ Common Mistakes
-<li>
+
 ❌ Working directly on `main`
 ❌ Rebasing shared branches
 ❌ Huge long-running branches
 ❌ Skipping PR reviews
-</li>
 
 ---
 
 # ✅ Best Practices
-<li>
+
 ✔ One feature per branch
 ✔ Small, frequent merges
 ✔ PRs with CI checks
 ✔ Delete merged branches
 ✔ Merge > Rebase for teams
-</li>
 
 ---
 
