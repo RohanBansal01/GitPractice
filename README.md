@@ -48,12 +48,10 @@ GitPractice/
 > Folder names are intentionally **lowercase and hyphenated** for consistency and cross-platform compatibility.
 
 ---
+## 🏗 Engineering Review & Delivery Standards
 
-## 🧪 Code Reviews & Collaboration
+This section explains how pull requests, code reviews, and engineering workflows are handled in real-world professional teams.
 
-This repository follows **real-world pull request, code review, and engineering practices** used in professional teams.
-
-Before contributing, please review:
 
 - 📄 **Pull Request Guidelines**  
   `docs/pull-request-guidelines.md`  
