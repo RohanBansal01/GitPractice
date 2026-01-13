@@ -120,7 +120,7 @@ cd GitPractice
 This repository is structured to help you **learn Git step by step**. Here’s how to get the most out of it:
 
 1. Each folder focuses on a **single Git concept** (e.g., `branching/`, `rebasing/`, `disaster-recovery/`).
-2. Start by following the **GitPractice roadmap** ([GitPractice Roadmap](gitpractice-roadmap/README.md)
+2. Start by following the **GitPractice roadmap** ([GitPractice Roadmap](gitpractice-roadmap.md)
 ) to know **what to practice at each level**.
 3. Run Git commands locally to experiment with the examples and exercises.
 4. Modify files, commit changes, and **break things on purpose — then recover them** 💪. Mistakes are part of learning.
