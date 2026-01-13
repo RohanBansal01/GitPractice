@@ -1,14 +1,6 @@
-##  `conflicts/conflicts.md`
-
-<img width="219" height="230" alt="image" src="https://github.com/user-attachments/assets/3c0e837f-3650-4b56-aca9-b24850c2486c" />
-
-
-````markdown
-````
 # Git Merge & Rebase Conflicts – Step by Step
 
 <img width="1502" height="994" alt="image" src="https://github.com/user-attachments/assets/fb6bfc50-51d8-4d36-8b42-3683262facc3" />
-
 
 This guide explains:
 - Why conflicts happen
@@ -20,25 +12,25 @@ This guide explains:
 
 ## 📚 Index
 
-1. What Is a Git Conflict  
-2. When Conflicts Occur  
-3. Creating a Feature Branch  
-4. Making Conflicting Changes  
-5. Triggering a Merge Conflict  
-6. Understanding Conflict Markers  
-7. Resolving a Merge Conflict  
-8. Completing or Aborting a Merge  
-9. Visual Diagram – Merge Conflict  
-10. Real Merge Conflict Scenario  
-11. Triggering a Rebase Conflict  
-12. Resolving a Rebase Conflict  
-13. Visual Diagram – Rebase Conflict  
-14. Common Mistakes  
-15. Best Practices & Mental Model  
+1. [What Is a Git Conflict](#1-what-is-a-git-conflict)  
+2. [When Conflicts Occur](#2-when-conflicts-occur)  
+3. [Creating a Feature Branch](#3-creating-a-feature-branch)  
+4. [Making Conflicting Changes](#4-making-conflicting-changes)  
+5. [Triggering a Merge Conflict](#5-triggering-a-merge-conflict)  
+6. [Understanding Conflict Markers](#6-understanding-conflict-markers)  
+7. [Resolving a Merge Conflict](#7-resolving-a-merge-conflict)  
+8. [Completing or Aborting a Merge](#8-completing-or-aborting-a-merge)  
+9. [Visual Diagram – Merge Conflict](#9-visual-diagram--merge-conflict)  
+10. [Real Merge Conflict Scenario](#10-real-merge-conflict-scenario)  
+11. [Triggering a Rebase Conflict](#11-triggering-a-rebase-conflict)  
+12. [Resolving a Rebase Conflict](#12-resolving-a-rebase-conflict)  
+13. [Visual Diagram – Rebase Conflict](#13-visual-diagram--rebase-conflict)  
+14. [Common Mistakes](#14-common-mistakes)  
+15. [Best Practices & Mental Model](#15-best-practices--mental-model)  
 
 ---
 
-## 1️⃣ What Is a Git Conflict
+## 1. What Is a Git Conflict
 
 A **Git conflict** occurs when Git cannot automatically decide
 which changes to keep.
@@ -50,7 +42,7 @@ which changes to keep.
 
 ---
 
-## 2️⃣ When Conflicts Occur
+## 2. When Conflicts Occur
 
 Conflicts commonly occur during:
 
@@ -58,13 +50,13 @@ Conflicts commonly occur during:
 git merge
 git rebase
 git cherry-pick
-````
+```
 
 Git pauses the operation and asks **you** to resolve it.
 
 ---
 
-## 3️⃣ Create a Feature Branch
+## 3. Creating a Feature Branch
 
 ```bash
 git checkout -b feature-branch
@@ -77,7 +69,9 @@ git checkout -b feature-branch
 
 ---
 
-## 4️⃣ Make Changes in Feature Branch
+## 4. Making Conflicting Changes
+
+### 4.1 Feature Branch Change
 
 ```bash
 echo "Feature branch change" >> conflict.txt
@@ -90,9 +84,7 @@ git commit -m "Feature branch change"
 * Modifies `conflict.txt`
 * Creates a commit unique to feature branch
 
----
-
-## 5️⃣ Make Conflicting Changes in Main
+### 4.2 Main Branch Change
 
 ```bash
 git checkout main
@@ -104,11 +96,11 @@ git commit -m "Main branch change"
 **Explanation:**
 
 * Modifies the **same file and same line**
-* This guarantees a conflict
+* Guarantees a conflict
 
 ---
 
-## 6️⃣ Trigger a Merge Conflict
+## 5. Triggering a Merge Conflict
 
 ```bash
 git merge feature-branch
@@ -121,7 +113,7 @@ git merge feature-branch
 
 ---
 
-## 7️⃣ Understanding Conflict Markers
+## 6. Understanding Conflict Markers
 
 Open `conflict.txt`:
 
@@ -141,9 +133,9 @@ Feature branch change
 
 ---
 
-## 8️⃣ Resolve the Merge Conflict
+## 7. Resolving a Merge Conflict
 
-### Example Resolution
+### 7.1 Example Resolution
 
 ```text
 Main branch change
@@ -161,15 +153,15 @@ git add conflict.txt
 
 ---
 
-## 9️⃣ Complete or Abort the Merge
+## 8. Completing or Aborting a Merge
 
-### Complete Merge
+### 8.1 Complete Merge
 
 ```bash
 git commit -m "Resolved merge conflict"
 ```
 
-### Abort Merge
+### 8.2 Abort Merge
 
 ```bash
 git merge --abort
@@ -182,9 +174,9 @@ git merge --abort
 
 ---
 
-# 📊 Visual Diagram – Merge Conflict
+## 9. Visual Diagram – Merge Conflict
 
-## Before Merge
+### 9.1 Before Merge
 
 ```
 main (HEAD)
@@ -198,9 +190,7 @@ main (HEAD)
   | Feature branch change
 ```
 
----
-
-## During Merge
+### 9.2 During Merge
 
 ```
 git merge feature-branch
@@ -208,9 +198,7 @@ git merge feature-branch
 ❌ Conflict in conflict.txt
 ```
 
----
-
-## After Resolution
+### 9.3 After Resolution
 
 ```
 main (HEAD)
@@ -225,7 +213,7 @@ main (HEAD)
 
 ---
 
-## 🔥 Real Merge Conflict Scenario
+## 10. Real Merge Conflict Scenario
 
 **Scenario:**
 Two developers update `timeout` value.
@@ -251,7 +239,7 @@ git commit -m "Resolve timeout conflict"
 
 ---
 
-## 🔁 Triggering a Rebase Conflict
+## 11. Triggering a Rebase Conflict
 
 ```bash
 git checkout feature-branch
@@ -265,7 +253,9 @@ git rebase main
 
 ---
 
-## 🔧 Resolving a Rebase Conflict
+## 12. Resolving a Rebase Conflict
+
+### 12.1 Fix Conflict
 
 ```bash
 # Fix the file
@@ -273,7 +263,7 @@ git add conflict.txt
 git rebase --continue
 ```
 
-### Abort Rebase
+### 12.2 Abort Rebase
 
 ```bash
 git rebase --abort
@@ -286,9 +276,9 @@ git rebase --abort
 
 ---
 
-# 📊 Visual Diagram – Rebase Conflict
+## 13. Visual Diagram – Rebase Conflict
 
-## Before Rebase
+### 13.1 Before Rebase
 
 ```
 main
@@ -302,9 +292,7 @@ main
   | Feature commit
 ```
 
----
-
-## After Rebase (Resolved)
+### 13.2 After Rebase (Resolved)
 
 ```
 feature-branch (HEAD)
@@ -318,33 +306,30 @@ feature-branch (HEAD)
 
 ---
 
-## ⚠️ Common Mistakes
+## 14. Common Mistakes
 
-❌ Panic-editing conflict markers
-❌ Forgetting `git add` after resolving
-❌ Rebasing shared branches
+❌ Panic-editing conflict markers  
+❌ Forgetting `git add` after resolving  
+❌ Rebasing shared branches  
 ❌ Auto-resolving without understanding
-
 
 <img width="481" height="494" alt="image" src="https://github.com/user-attachments/assets/1283ccee-0f9d-442d-b5d8-4753f3419b21" />
 
-
 ---
 
-## ✅ Best Practices
+## 15. Best Practices & Mental Model
 
-✔ Keep commits small
-✔ Pull latest `main` before merging
-✔ Resolve conflicts locally
-✔ Use merge for shared branches
+### 15.1 Best Practices
+
+✔ Keep commits small  
+✔ Pull latest `main` before merging  
+✔ Resolve conflicts locally  
+✔ Use merge for shared branches  
 ✔ Rebase only personal branches
 
----
-
-## 🧠 Final Mental Model
+### 15.2 Final Mental Model
 
 <img width="277" height="182" alt="image" src="https://github.com/user-attachments/assets/b1062db7-f24b-46e7-b8b1-448687268baa" />
 
-> **A conflict is Git asking you to choose the source of truth.
+> **A conflict is Git asking you to choose the source of truth.  
 > Git never guesses — humans decide.**
-
