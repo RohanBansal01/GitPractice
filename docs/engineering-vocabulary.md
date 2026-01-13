@@ -215,6 +215,9 @@ Common industry language:
 * **Draft PR** → Work in progress  
 * **Code Owner** → Responsible person/team
 
+  <img width="332" height="152" alt="image" src="https://github.com/user-attachments/assets/4a380b35-0d35-4d78-90f2-0bab4d872bf0" />
+
+
 Approval means **safe to ship**, not perfect.
 
 ---
