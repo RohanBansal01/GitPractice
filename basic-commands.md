@@ -20,7 +20,7 @@ This document explains **basic Git commands line by line**, how they affect the 
 10. [Removing & Renaming Files](#10-removing--renaming-files)  
 11. [Inspecting a Commit](#11-inspecting-a-commit)  
 12. [Undoing Commits (Soft vs Hard)](#12-undoing-commits-soft-vs-hard)  
-13. [End‑to‑End Local Workflow](#13-end-to-end-local-workflow)  
+13. [End to End Local Workflow](#13-end-to-end-local-workflow)  
 14. [Common Beginner Mistakes](#14-common-beginner-mistakes)  
 15. [Final Mental Model](#15-final-mental-model)  
 
@@ -222,7 +222,7 @@ git reset --hard HEAD~1
 
 ---
 
-## 13. End‑to‑End Local Workflow
+## 13. End to End Local Workflow
 
 ```
 Edit file
