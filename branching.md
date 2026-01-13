@@ -16,10 +16,6 @@ This document is a **team-ready guide** covering:
 
 ---
 
-
-
-## 📚 Index
-
 ## 📚 Index
 
 1. [View Current Branch](#view-current-branch)
