@@ -53,6 +53,7 @@ It’s called a Pull Request because you push to your branch, but request the up
 ---
 
 ## 2. Why PR Reviews Matter
+<img width="284" height="177" alt="image" src="https://github.com/user-attachments/assets/2ad398a0-7de8-4958-9455-ba43939e1557" />
 
 PR reviews exist to:
 
