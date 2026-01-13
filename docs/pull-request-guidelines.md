@@ -226,6 +226,9 @@ They **do not** nitpick style endlessly.
 
 > Never start line-by-line without context.
 
+<img width="939" height="956" alt="image" src="https://github.com/user-attachments/assets/5f324872-fa44-4853-b6c2-2d56ff037b7b" />
+
+
 ---
 
 ## 10. Commenting Style (How Seniors Comment)
