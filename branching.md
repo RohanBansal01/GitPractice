@@ -16,33 +16,30 @@ This document is a **team-ready guide** covering:
 
 ---
 
+
+
 ## 📚 Index
 
-1. [View Current Branch](#view-current-branch)  
-2. [Create a New Branch](#create-a-new-branch)  
-3. [Switch to the New Branch](#switch-to-the-new-branch)  
-4. [Make Changes in Feature Branch](#make-changes-in-feature-branch)  
-5. [Switch Back to Main](#switch-back-to-main)  
-6. [Merge Feature Branch into Main](#merge-feature-branch-into-main)  
-7. [Delete Feature Branch](#delete-feature-branch)  
-8. [View All Branches](#view-all-branches)  
-9. [Visual Diagram – Basic Branching](#visual-diagram--basic-branching)  
-10. [Fast-Forward vs Merge Commit](#fast-forward-vs-merge-commit)  
-11. [Merge vs Rebase](#merge-vs-rebase)  
-12. [Real-World Developer Workflow](#real-world-developer-workflow)  
-13. [PR / Code Review Flow](#pr--code-review-flow)  
-14. [CI/CD Interaction with Branches](#cicd-interaction-with-branches)  
-15. [Real Merge Conflict Scenario](#real-merge-conflict-scenario)  
-16. [Real Rebase Conflict Scenario](#real-rebase-conflict-scenario)  
-17. [Common Mistakes](#common-mistakes)  
-18. [Best Practices](#best-practices)  
-19. [Team Branching Strategies](#team-branching-strategies)  
-20. [Final Mental Model](#final-mental-model)  
+1. [View & Create Branches](#view-current-branch)  
+2. [Working with Feature Branches](#create-a-new-branch)  
+3. [Merging into Main](#merge-feature-branch-into-main)  
+4. [Visual Diagrams – Branching & Merging](#visual-diagram--basic-branching)  
+5. [Fast-Forward vs Merge Commit](#fast-forward-vs-merge-commit)  
+6. [Merge vs Rebase (Comparison)](#merge-vs-rebase)  
+7. [Real-World Developer Workflow](#real-world-developer-workflow)  
+8. [PR / Code Review Flow](#pr--code-review-flow)  
+9. [CI/CD Interaction with Branches](#cicd-interaction-with-branches)  
+10. [Real Merge Conflict Scenario](#real-merge-conflict-scenario)  
+11. [Real Rebase Conflict Scenario](#real-rebase-conflict-scenario)  
+12. [Common Mistakes](#common-mistakes)  
+13. [Best Practices](#best-practices)  
+14. [Team Branching Strategies](#team-branching-strategies)  
+15. [Final Mental Model](#final-mental-model)  
 
 
 ---
 
-## View Current Branch 🔹
+## 1️⃣ View Current Branch 
 
 ```bash
 git branch
@@ -379,23 +376,23 @@ git rebase --abort
 ---
 
 # ⚠️ Common Mistakes
-<li>
+
 ❌ Working directly on `main`
 ❌ Rebasing shared branches
 ❌ Huge long-running branches
 ❌ Skipping PR reviews
-</li>
+
 
 ---
 
 # ✅ Best Practices
-<li>
+
 ✔ One feature per branch
 ✔ Small, frequent merges
 ✔ PRs with CI checks
 ✔ Delete merged branches
 ✔ Merge > Rebase for teams
-</li>
+
 
 ---
 
