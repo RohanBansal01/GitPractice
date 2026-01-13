@@ -1,6 +1,6 @@
 # GitHub Pull Request (PR) Guide: Templates + Reviews
 
-This guide explains **how to create, review, and approve Pull Requests** the way **experienced engineers do in real teams**. It combines **PR templates** with **senior-level review practices**.
+This guide explains **how to create, review, and approve Pull Requests** the way **experienced engineers do in real teams**. It combines **PR templates** with **review practices**.
 
 > **PR reviews are not about control.**
 > They are about **code quality, shared ownership, and long-term safety**.
@@ -46,6 +46,11 @@ It is **not**:
 * Just “LGTM”
 
 It’s a **checkpoint before shared truth changes**.
+
+<img width="227" height="222" alt="image" src="https://github.com/user-attachments/assets/9857610f-114c-478a-8421-8c4a0d7d7d0e" />
+
+It’s called a Pull Request because you push to your branch, but request the upstream to pull.
+
 
 ---
 
@@ -306,6 +311,9 @@ Senior behavior:
 ---
 
 ## 1️⃣6️⃣ Final PR Review Mental Model
+
+<img width="275" height="183" alt="image" src="https://github.com/user-attachments/assets/08de94ff-42b9-44f1-9024-45df60f27628" />
+
 
 > **PRs are conversations, not gatekeeping.**
 > Reviews protect the codebase, not egos.
