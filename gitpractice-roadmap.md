@@ -6,24 +6,36 @@ The goal is not memorizing commands, but **understanding what Git is doing and h
 
 <img width="600" height="428" alt="image" src="https://github.com/user-attachments/assets/6d0ce931-1661-4da4-b523-0d3c95c02656" />
 
+---
+
+## 📚 Index
+
+1. [Level 1: Foundations (Beginner)](#1-level-1-foundations-beginner)  
+2. [Level 2: Branching & Local Workflows (Intermediate)](#2-level-2-branching--local-workflows-intermediate)  
+3. [Level 3: Remote Workflows (Team-Ready)](#3-level-3-remote-workflows-team-ready)  
+4. [Level 4: Git Internals (Confidence Layer)](#4-level-4-git-internals-confidence-layer)  
+5. [Level 5: Disaster Recovery (Senior-Level)](#5-level-5-disaster-recovery-senior-level)  
+6. [Additional Documentation / Reference Docs](#6-additional-documentation--reference-docs)  
+7. [Final Mental Model](#7-final-mental-model)  
+8. [How to Use This Roadmap](#8-how-to-use-this-roadmap)  
 
 ---
 
-## 🟢 Level 1: Foundations (Beginner)
+## 1. Level 1: Foundations (Beginner)
 
 **Goal:** Become comfortable using Git locally without fear.
 
-### Topics
+### 1.1 Topics
 
-* What Git is (snapshot-based, not diff-based)
-* Repository, working tree, staging area
+* What Git is (snapshot-based, not diff-based)  
+* Repository, working tree, staging area  
 * Commits and commit history
 
-### Practice From Repo
+### 1.2 Practice From Repo
 
 * `basic-commands/`
 
-### Must-Know Commands
+### 1.3 Must-Know Commands
 
 ```bash
 git init
@@ -34,31 +46,31 @@ git log
 git diff
 ```
 
-### You’re Ready to Move On When:
+### 1.4 You’re Ready to Move On When
 
-* You understand what a commit represents
-* You know what is staged vs unstaged
+* You understand what a commit represents  
+* You know what is staged vs unstaged  
 * You are not afraid of making commits
 
 ---
 
-## 🟡 Level 2: Branching & Local Workflows (Intermediate)
+## 2. Level 2: Branching & Local Workflows (Intermediate)
 
 **Goal:** Work with branches confidently and understand history.
 
-### Topics
+### 2.1 Topics
 
-* Branches as pointers
-* Merging vs rebasing
+* Branches as pointers  
+* Merging vs rebasing  
 * Conflict basics
 
-### Practice From Repo
+### 2.2 Practice From Repo
 
-* `branching/`
-* `rebasing/`
+* `branching/`  
+* `rebasing/`  
 * `conflicts/`
 
-### Must-Know Commands
+### 2.3 Must-Know Commands
 
 ```bash
 git branch
@@ -68,33 +80,33 @@ git rebase
 git cherry-pick
 ```
 
-### Common Mistakes to Learn From
+### 2.4 Common Mistakes to Learn From
 
-* Rebasing shared branches
+* Rebasing shared branches  
 * Resolving conflicts without understanding them
 
-### You’re Ready to Move On When:
+### 2.5 You’re Ready to Move On When
 
-* You can explain the difference between merge and rebase
+* You can explain the difference between merge and rebase  
 * You can fix a simple conflict calmly
 
 ---
 
-## 🔵 Level 3: Remote Workflows (Team-Ready)
+## 3. Level 3: Remote Workflows (Team-Ready)
 
 **Goal:** Work safely with other developers.
 
-### Topics
+### 3.1 Topics
 
-* Remotes and remote-tracking branches
-* `fetch` vs `pull`
+* Remotes and remote-tracking branches  
+* `fetch` vs `pull`  
 * Push safety rules
 
-### Practice From Repo
+### 3.2 Practice From Repo
 
 * `git-workflow/`
 
-### Must-Know Commands
+### 3.3 Must-Know Commands
 
 ```bash
 git remote -v
@@ -103,60 +115,60 @@ git pull
 git push
 ```
 
-### Senior Rules
+### 3.4 Senior Rules
 
-* Prefer `fetch` over blind `pull`
-* Never force-push to shared branches
+* Prefer `fetch` over blind `pull`  
+* Never force-push to shared branches  
 * Always understand what you are pushing
 
-### You’re Ready to Move On When:
+### 3.5 You’re Ready to Move On When
 
-* You understand what `origin/main` really is
+* You understand what `origin/main` really is  
 * You can explain why a push was rejected
 
 ---
 
-## 🟣 Level 4: Git Internals (Confidence Layer)
+## 4. Level 4: Git Internals (Confidence Layer)
 
 **Goal:** Understand *why* Git behaves the way it does.
 
-### Topics
+### 4.1 Topics
 
-* `.git` directory
-* Objects (commit, tree, blob)
-* Refs, HEAD, detached HEAD
+* `.git` directory  
+* Objects (commit, tree, blob)  
+* Refs, HEAD, detached HEAD  
 * Reflog
 
-### Practice From Repo
+### 4.2 Practice From Repo
 
 * `git-internals/`
 
-### Key Insight
+### 4.3 Key Insight
 
 > Git is a graph of immutable objects with movable pointers.
 
-### You’re Ready to Move On When:
+### 4.4 You’re Ready to Move On When
 
-* You understand that deleting commits usually means losing refs
+* You understand that deleting commits usually means losing refs  
 * You trust Git’s safety model
 
 ---
 
-## 🔴 Level 5: Disaster Recovery (Senior-Level)
+## 5. Level 5: Disaster Recovery (Senior-Level)
 
 **Goal:** Stay calm under pressure and recover from mistakes.
 
-### Topics
+### 5.1 Topics
 
-* Undoing bad rebases
-* Recovering deleted commits
+* Undoing bad rebases  
+* Recovering deleted commits  
 * Fixing broken branches
 
-### Practice From Repo
+### 5.2 Practice From Repo
 
 * `disaster-recovery/`
 
-### Must-Know Commands
+### 5.3 Must-Know Commands
 
 ```bash
 git reflog
@@ -164,32 +176,45 @@ git reset --hard
 git revert
 ```
 
-### Senior Mindset
+### 5.4 Senior Mindset
 
-* Mistakes are expected
-* Recovery is a skill, not luck
+* Mistakes are expected  
+* Recovery is a skill, not luck  
 * Reflog is your best friend
 
 ---
 
-## 🧠 Final Mental Model
+## 6. Additional Documentation / Reference Docs
 
-> **Git is safe by design.
-> Commits are rarely lost.
-> Most problems are pointer problems.
+To truly master Git in a professional environment, consult these **team reference documents**:
+
+```
+docs/
+├── pull-request-guidelines.md       # PR rules & workflow
+├── engineering-vocabulary.md        # Industry terms / Git vocabulary
+└── engineering-foundations.md       # Ownership, production mindset, incident handling, etc.
+```
+
+> These documents complement practical Git skills with **PR culture, vocabulary, and senior engineering mindset**.
+
+---
+
+## 7. Final Mental Model
+
+> **Git is safe by design.  
+> Commits are rarely lost.  
+> Most problems are pointer problems.  
 > If it happened locally, reflog remembers it.**
 
 Once this clicks, Git stops being scary.
 
 ---
 
-## ✅ How to Use This Roadmap
+## 8. How to Use This Roadmap
 
-* Follow levels in order
-* Practice, don’t rush
-* Break things intentionally
+* Follow levels in order  
+* Practice, don’t rush  
+* Break things intentionally  
 * Recover them confidently
 
 This is how real Git mastery is built.
-
----
