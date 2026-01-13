@@ -244,6 +244,8 @@ Good comments are:
 
 ## 11. Approving a PR
 
+<img width="217" height="232" alt="image" src="https://github.com/user-attachments/assets/5018ccfd-d8c5-4215-9f02-09c71324de03" />
+
 Approve when:
 
 * Code does what it claims  
