@@ -267,7 +267,7 @@ Tone = professionalism.
 
 ---
 
-## 🧠 Final Senior Mental Model
+## 🧠 Final  Mental Model
 
 > **Knowing tools is junior.
 > Knowing vocabulary is professional.
