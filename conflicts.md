@@ -7,6 +7,7 @@ This guide explains:
 - How to resolve merge and rebase conflicts
 - How Git records conflict resolutions
 - Best practices teams follow to avoid them
+<img width="219" height="230" alt="image" src="https://github.com/user-attachments/assets/c923b1d9-fd38-46eb-841b-57aa522ccb06" />
 
 ---
 
