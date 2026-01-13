@@ -114,9 +114,6 @@ cd GitPractice
 2. Navigate into any folder and follow the examples or README files inside.
 
 ---
-Got it! You want to **tie the “How to Use This Repository” section to the GitPractice roadmap** in a way that makes the README more actionable and flows naturally. Here's a polished way to rewrite it:
-
----
 
 ## 🏃 How to Use This Repository
 
