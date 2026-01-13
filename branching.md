@@ -18,7 +18,7 @@ This document is a **team-ready guide** covering:
 
 ## 📚 Index
 
-1. [View Current Branch](#1.-view-current-branch)
+1. [View Current Branch](#1-view-current-branch)
 2. [Create a New Branch](#create-a-new-branch)
 3. [Switch to the New Branch](#switch-to-the-new-branch)
 4. [Make Changes in Feature Branch](#make-changes-in-feature-branch)
