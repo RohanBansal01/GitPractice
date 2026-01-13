@@ -17,22 +17,24 @@ This document is a **team-ready guide** covering:
 ---
 
 ## 📚 Index
+## 📚 Index
 
-1. View & Create Branches  
-2. Working with Feature Branches  
-3. Merging into Main  
-4. Visual Diagrams – Branching & Merging  
-5. Fast-Forward vs Merge Commit  
-6. Merge vs Rebase (Comparison)  
-7. Real-World Developer Workflow  
-8. PR / Code Review Flow  
-9. CI/CD Interaction with Branches  
-10. Real Merge Conflict Scenario  
-11. Real Rebase Conflict Scenario  
-12. Common Mistakes  
-13. Best Practices  
-14. Team Branching Strategies  
-15. Final Mental Model  
+1. [View & Create Branches](#1️⃣-view-current-branch)  
+2. [Working with Feature Branches](#2️⃣-create-a-new-branch)  
+3. [Merging into Main](#6️⃣-merge-feature-branch-into-main)  
+4. [Visual Diagrams – Branching & Merging](#📊-visual-diagram--basic-branching)  
+5. [Fast-Forward vs Merge Commit](#🔀-fast-forward-vs-merge-commit)  
+6. [Merge vs Rebase (Comparison)](#🔁-merge-vs-rebase)  
+7. [Real-World Developer Workflow](#🧪-real-world-developer-workflow)  
+8. [PR / Code Review Flow](#🔍-pr--code-review-flow)  
+9. [CI/CD Interaction with Branches](#⚙️-cicd-interaction-with-branches)  
+10. [Real Merge Conflict Scenario](#🔥-real-merge-conflict-scenario)  
+11. [Real Rebase Conflict Scenario](#🔥-real-rebase-conflict-scenario)  
+12. [Common Mistakes](#⚠️-common-mistakes)  
+13. [Best Practices](#✅-best-practices)  
+14. [Team Branching Strategies](#🏗-team-branching-strategies)  
+15. [Final Mental Model](#🧠-final-mental-model)  
+
 
 ---
 
