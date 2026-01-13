@@ -83,6 +83,9 @@ Do **not** open half-broken PRs unless marked as **Draft**.
 
 ## 4. Size of a Good PR
 
+<img width="640" height="515" alt="image" src="https://github.com/user-attachments/assets/c5075e2f-817f-4ed2-a485-b1372cc125b6" />
+
+
 Senior rule:
 
 > **If a PR cannot be reviewed in ~15–30 minutes, it’s too big.**
