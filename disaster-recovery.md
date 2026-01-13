@@ -1,10 +1,11 @@
-# Git Disaster Recovery 
+# Git Disaster Recovery
+
 This guide explains **how to recover from catastrophic Git mistakes**, so you:
 
 * Don’t panic when history is broken
 * Recover lost commits safely
 * Fix messed-up branches without hurting teammates
-  
+
 <img width="318" height="159" alt="image" src="https://github.com/user-attachments/assets/d6100ea1-c813-4256-95db-43e24bd62575" />
 
 > ⚠️ Practical, hands-on, real-world advice — no fluff.
@@ -13,34 +14,34 @@ This guide explains **how to recover from catastrophic Git mistakes**, so you:
 
 ## 📚 Index
 
-1. Why Disaster Recovery Matters
-2. Understand the Graph First
-3. Check `HEAD` and Current Branch
-4. Viewing `reflog` for Recovery Points
-5. Recovering a Lost Commit
-6. Undoing a Bad Rebase
-7. Undoing a Bad Merge
-8. Fixing a Broken Branch
-9. Reset vs Revert
-10. Recovering Deleted Branches
-11. Recovering Forced Pushed History
-12. When to Use `git fsck`
-13. Recovering Orphaned Commits
-14. Common Recovery Mistakes
-15. Final Recovery Mental Model
+1. [Why Disaster Recovery Matters](#1-why-disaster-recovery-matters)  
+2. [Understand the Graph First](#2-understand-the-graph-first)  
+3. [Check `HEAD` and Current Branch](#3-check-head-and-current-branch)  
+4. [Viewing `reflog` for Recovery Points](#4-viewing-reflog-for-recovery-points)  
+5. [Recovering a Lost Commit](#5-recovering-a-lost-commit)  
+6. [Undoing a Bad Rebase](#6-undoing-a-bad-rebase)  
+7. [Undoing a Bad Merge](#7-undoing-a-bad-merge)  
+8. [Fixing a Broken Branch](#8-fixing-a-broken-branch)  
+9. [Reset vs Revert](#9-reset-vs-revert)  
+10. [Recovering Deleted Branches](#10-recovering-deleted-branches)  
+11. [Recovering Forced-Pushed History](#11-recovering-forced-pushed-history)  
+12. [When to Use `git fsck`](#12-when-to-use-git-fsck)  
+13. [Recovering Orphaned Commits](#13-recovering-orphaned-commits)  
+14. [Common Recovery Mistakes](#14-common-recovery-mistakes)  
+15. [Final Recovery Mental Model](#15-final-recovery-mental-model)  
 
 ---
 
-## 1️⃣ Why Disaster Recovery Matters
+## 1. Why Disaster Recovery Matters
 
-Git rarely deletes commits instantly.
+Git rarely deletes commits instantly.  
 Most “lost” work is **just dangling pointers**.
 
 > Knowledge of internals + reflog = confidence under pressure.
 
 ---
 
-## 2️⃣ Understand the Graph First
+## 2. Understand the Graph First
 
 Always visualize history:
 
@@ -50,27 +51,27 @@ git log --graph --oneline --all
 
 Questions to ask:
 
-* Where is `HEAD`?
-* Which branch is broken?
+* Where is `HEAD`?  
+* Which branch is broken?  
 * What commit(s) are missing?
 
 ---
 
-## 3️⃣ Check `HEAD` and Current Branch
+## 3. Check `HEAD` and Current Branch
 
 ```bash
 git status
 git branch -vv
 ```
 
-* Are you on the branch you think you are?
+* Are you on the branch you think you are?  
 * Are you detached?
 
 Detachment often explains “lost commits.”
 
 ---
 
-## 4️⃣ Viewing `reflog` for Recovery Points
+## 4. Viewing `reflog` for Recovery Points
 
 ```bash
 git reflog
@@ -87,7 +88,7 @@ Reflog is **your undo history**.
 
 ---
 
-## 5️⃣ Recovering a Lost Commit
+## 5. Recovering a Lost Commit
 
 ```bash
 git checkout d4e5f6
@@ -104,25 +105,29 @@ git branch recovered d4e5f6
 
 ---
 
-## 6️⃣ Undoing a Bad Rebase
+## 6. Undoing a Bad Rebase
 
 ```bash
 git reflog
 git reset --hard HEAD@{3}
 ```
 
-* HEAD@{3} = state before rebase
+* HEAD@{3} = state before rebase  
 * Never panic, reflog keeps all previous refs
 
 ---
 
-## 7️⃣ Undoing a Bad Merge
+## 7. Undoing a Bad Merge
+
+### 7.1 Abort Merge
 
 If merge went wrong:
 
 ```bash
 git merge --abort
 ```
+
+### 7.2 Reset After Merge
 
 If already committed:
 
@@ -134,7 +139,7 @@ git reset --hard HEAD@{1}
 
 ---
 
-## 8️⃣ Fixing a Broken Branch
+## 8. Fixing a Broken Branch
 
 Scenario: branch points to wrong commit
 
@@ -147,7 +152,7 @@ git push --force-with-lease origin broken-branch
 
 ---
 
-## 9️⃣ Reset vs Revert
+## 9. Reset vs Revert
 
 | Reset                | Revert                     |
 | -------------------- | -------------------------- |
@@ -159,7 +164,7 @@ git push --force-with-lease origin broken-branch
 
 ---
 
-## 🔟 Recovering Deleted Branches
+## 10. Recovering Deleted Branches
 
 ```bash
 git reflog
@@ -170,7 +175,7 @@ Even a branch deleted days ago can often be restored.
 
 ---
 
-## 1️⃣1️⃣ Recovering Forced-Pushed History
+## 11. Recovering Forced-Pushed History
 
 ```bash
 git fetch origin
@@ -182,51 +187,48 @@ git reset --hard <good-commit>
 
 ---
 
-## 1️⃣2️⃣ When to Use `git fsck`
+## 12. When to Use `git fsck`
 
 ```bash
 git fsck --lost-found
 ```
 
-* Finds dangling commits
+* Finds dangling commits  
 * Useful if commits are “lost” after weird operations
 
 > Only needed in extreme cases.
 
 ---
 
-## 1️⃣3️⃣ Recovering Orphaned Commits
+## 13. Recovering Orphaned Commits
 
 ```bash
 git show <commit-hash>
 git branch recovered <commit-hash>
 ```
 
-* Orphaned commits = commits with no branch pointing to them
+* Orphaned commits = commits with no branch pointing to them  
 * Reflog + fsck = rescue toolset
 
 ---
 
-## 1️⃣4️⃣ Common Recovery Mistakes
+## 14. Common Recovery Mistakes
 
-❌ Panic and delete `.git/`
-❌ Force push without checking teammates
-❌ Reset shared branches blindly
-❌ Forgetting reflog exists
+❌ Panic and delete `.git/`  
+❌ Force push without checking teammates  
+❌ Reset shared branches blindly  
+❌ Forgetting reflog exists  
 ❌ Ignoring backup forks
 
 > Git almost always lets you recover if you stay calm.
 
 ---
 
-## 1️⃣5️⃣ Final Recovery Mental Model
+## 15. Final Recovery Mental Model
 
-> **Git stores everything as objects + refs + logs.
-> Commits are immutable; pointers move.
-> Reflog and fetch are your lifelines.
+> **Git stores everything as objects + refs + logs.  
+> Commits are immutable; pointers move.  
+> Reflog and fetch are your lifelines.  
 > Reset/recover/rebase carefully, never blindly.**
 
 With this, even catastrophic mistakes are recoverable.
-
----
-
