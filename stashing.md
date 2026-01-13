@@ -9,30 +9,29 @@ This guide explains **Git stash** in depth:
 
 <img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/d3d579c8-e3b6-4a8b-b049-ca32597ebabc" />
 
-
 ---
 
 ## 📌 Index
 
-1. What Is Git Stash  
-2. When Git Stash Is Used  
-3. What Git Stash Is NOT  
-4. Working Directory vs Staging vs Commit  
-5. Creating Uncommitted Changes  
-6. Saving Changes to Stash  
-7. What Happens Internally (Internals)  
-8. Listing & Inspecting Stashes  
-9. Applying vs Popping a Stash  
-10. Visual Diagram – Stash Lifecycle  
-11. Real Stash Conflict Scenario  
-12. Resolving a Stash Conflict  
-13. Dropping & Clearing Stashes  
-14. Common Mistakes  
-15. Best Practices & Final Mental Model  
+1. [What Is Git Stash](#1-what-is-git-stash)  
+2. [When Git Stash Is Used](#2-when-git-stash-is-used)  
+3. [What Git Stash Is NOT](#3-what-git-stash-is-not)  
+4. [Working Directory vs Staging vs Commit](#4-working-directory-vs-staging-vs-commit)  
+5. [Creating Uncommitted Changes](#5-creating-uncommitted-changes)  
+6. [Saving Changes to Stash](#6-saving-changes-to-stash)  
+7. [What Happens Internally (Internals)](#7-what-happens-internally-internals)  
+8. [Listing & Inspecting Stashes](#8-listing--inspecting-stashes)  
+9. [Applying vs Popping a Stash](#9-applying-vs-popping-a-stash)  
+10. [Visual Diagram – Stash Lifecycle](#10-visual-diagram--stash-lifecycle)  
+11. [Real Stash Conflict Scenario](#11-real-stash-conflict-scenario)  
+12. [Resolving a Stash Conflict](#12-resolving-a-stash-conflict)  
+13. [Dropping & Clearing Stashes](#13-dropping--clearing-stashes)  
+14. [Common Mistakes](#14-common-mistakes)  
+15. [Best Practices & Final Mental Model](#15-best-practices--final-mental-model)  
 
 ---
 
-## 1️⃣ What Is Git Stash
+## 1. What Is Git Stash
 
 `git stash` temporarily **shelves uncommitted changes** so you can:
 - Switch branches
@@ -45,7 +44,7 @@ Without committing unfinished work.
 
 ---
 
-## 2️⃣ When Git Stash Is Used
+## 2. When Git Stash Is Used
 
 ✔ Quick context switch  
 ✔ Pull latest changes safely  
@@ -58,7 +57,7 @@ Without committing unfinished work.
 
 ---
 
-## 3️⃣ What Git Stash Is NOT
+## 3. What Git Stash Is NOT
 
 ❌ Not part of commit history  
 ❌ Not pushed to remote  
@@ -69,7 +68,7 @@ Stashes are **local and fragile**.
 
 ---
 
-## 4️⃣ Working Directory vs Staging vs Commit
+## 4. Working Directory vs Staging vs Commit
 
 Before stash:
 
@@ -87,7 +86,7 @@ Never commit history.
 
 ---
 
-## 5️⃣ Creating Uncommitted Changes
+## 5. Creating Uncommitted Changes
 
 ```bash
 echo "Temporary work" >> temp.txt
@@ -101,7 +100,7 @@ git status
 
 ---
 
-## 6️⃣ Saving Changes to Stash
+## 6. Saving Changes to Stash
 
 ```bash
 git stash
@@ -116,7 +115,7 @@ Working directory becomes **clean**.
 
 ---
 
-## 7️⃣ What Happens Internally (Internals)
+## 7. What Happens Internally (Internals)
 
 Internally Git:
 ```
@@ -129,7 +128,7 @@ Stash is **a hidden commit stack**, not magic.
 
 ---
 
-## 8️⃣ Listing & Inspecting Stashes
+## 8. Listing & Inspecting Stashes
 
 ```bash
 git stash list
@@ -150,16 +149,16 @@ git stash show -p stash@{0}
 
 ---
 
-## 9️⃣ Applying vs Popping a Stash
+## 9. Applying vs Popping a Stash
 
-### Apply
+### 9.1 Apply
 ```bash
 git stash apply
 ```
 ✔ Restores changes  
 ✔ Keeps stash  
 
-### Pop
+### 9.2 Pop
 ```bash
 git stash pop
 ```
@@ -170,9 +169,9 @@ git stash pop
 
 ---
 
-## 🔟 Visual Diagram – Stash Lifecycle
+## 10. Visual Diagram – Stash Lifecycle
 
-### Before Stash
+### 10.1 Before Stash
 ```
 Working Directory:
 ├── temp.txt (modified)
@@ -182,7 +181,7 @@ Commit History:
 * Initial commit
 ```
 
-### After `git stash`
+### 10.2 After `git stash`
 ```
 Working Directory: clean
 Staging Area: empty
@@ -194,7 +193,7 @@ Commit History:
 * Initial commit
 ```
 
-### After `git stash pop`
+### 10.3 After `git stash pop`
 ```
 Working Directory:
 ├── temp.txt (restored)
@@ -205,7 +204,7 @@ Commit History unchanged
 
 ---
 
-## 1️⃣1️⃣ Real Stash Conflict Scenario
+## 11. Real Stash Conflict Scenario
 
 Conflict occurs when:
 - You stash changes
@@ -220,7 +219,7 @@ git stash apply
 
 ---
 
-## 1️⃣2️⃣ Resolving a Stash Conflict
+## 12. Resolving a Stash Conflict
 
 Conflict markers appear:
 
@@ -232,24 +231,23 @@ Stashed change
 >>>>>>> Stashed changes
 ```
 
-### Resolve manually, then:
-
+### 12.1 Resolve manually
 ```bash
 git add temp.txt
 ```
 
-If using `pop`, Git removes stash **only if successful**.
+> If using `pop`, Git removes stash **only if successful**.
 
 ---
 
-## 1️⃣3️⃣ Dropping & Clearing Stashes
+## 13. Dropping & Clearing Stashes
 
-### Drop one stash
+### 13.1 Drop one stash
 ```bash
 git stash drop stash@{0}
 ```
 
-### Clear all stashes
+### 13.2 Clear all stashes
 ```bash
 git stash clear
 ```
@@ -258,7 +256,7 @@ git stash clear
 
 ---
 
-## 1️⃣4️⃣ Common Mistakes
+## 14. Common Mistakes
 
 ❌ Using stash as long-term storage  
 ❌ Forgetting stashes exist  
@@ -268,22 +266,21 @@ git stash clear
 
 ---
 
-## 1️⃣5️⃣ Best Practices & Final Mental Model
+## 15. Best Practices & Final Mental Model
 
-### Best Practices
+### 15.1 Best Practices
 ✔ Stash only short-lived work  
 ✔ Use stash messages  
 ✔ Prefer commits over stash  
 ✔ Clear stash regularly  
 ✔ Use apply before pop  
 
-### Final Mental Model
+### 15.2 Final Mental Model
 
 > **Stash is a temporary drawer —  
 > commits are permanent shelves.**
 
 <img width="500" height="659" alt="image" src="https://github.com/user-attachments/assets/b5d947be-649f-4655-b44a-03b2d5bb2f6b" />
-
 
 ---
 
