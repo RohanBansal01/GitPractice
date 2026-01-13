@@ -306,15 +306,16 @@ Senior behavior:
 * Rewrite someone’s code without explanation  
 * Block PRs over personal preference  
 * Ignore CI failures
+<img width="500" height="544" alt="image" src="https://github.com/user-attachments/assets/46f0aaf2-1b84-4b4c-a4a0-4e2d8d3a4f8f" />
 
 ---
 
 ## 16. Final PR Review Mental Model
 
-<img width="275" height="183" alt="image" src="https://github.com/user-attachments/assets/08de94ff-42b9-44f1-9024-45df60f27628" />
-
 > **PRs are conversations, not gatekeeping.**  
 > Reviews protect the codebase, not egos.  
 > Shared code means shared responsibility.
+
+<img width="275" height="183" alt="image" src="https://github.com/user-attachments/assets/08de94ff-42b9-44f1-9024-45df60f27628" />
 
 > A strong PR culture creates **strong teams**.
