@@ -39,7 +39,8 @@ This document is a **team-ready guide** covering:
 
 ---
 
-## 1️⃣ View Current Branch 
+## View Current Branch 🔹
+
 
 ```bash
 git branch
