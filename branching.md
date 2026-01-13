@@ -1,10 +1,3 @@
-
-##  `branching/branching.md`
-
-<img width="1921" height="1057" alt="image" src="https://github.com/user-attachments/assets/54d9b2aa-bced-432c-991b-336938af203d" />
-
-````markdown
-````
 # Git Branching & Merging – Step by Step
 
 This document is a **team-ready guide** covering:
@@ -19,35 +12,33 @@ This document is a **team-ready guide** covering:
 ## 📚 Index
 
 1. [View Current Branch](#1-view-current-branch)
-2. [Create a New Branch](#create-a-new-branch)
-3. [Switch to the New Branch](#switch-to-the-new-branch)
-4. [Make Changes in Feature Branch](#make-changes-in-feature-branch)
-5. [Switch Back to Main](#switch-back-to-main)
-6. [Merge Feature Branch into Main](#merge-feature-branch-into-main)
-7. [Delete Feature Branch](#delete-feature-branch)
-8. [View All Branches](#view-all-branches)
-9. [Visual Diagram – Basic Branching](#visual-diagram--basic-branching)
-10. [Fast-Forward vs Merge Commit](#fast-forward-vs-merge-commit)
-11. [Merge vs Rebase](#merge-vs-rebase)
-12. [Real-World Developer Workflow](#real-world-developer-workflow)
-13. [PR / Code Review Flow](#pr--code-review-flow)
-14. [CI/CD Interaction with Branches](#cicd-interaction-with-branches)
-15. [Real Merge Conflict Scenario](#real-merge-conflict-scenario)
-16. [Real Rebase Conflict Scenario](#real-rebase-conflict-scenario)
-17. [Common Mistakes](#common-mistakes)
-18. [Best Practices](#best-practices)
-19. [Team Branching Strategies](#team-branching-strategies)
-20. [Final Mental Model](#final-mental-model)
-
+2. [Create a New Branch](#2-create-a-new-branch)
+3. [Switch to the New Branch](#3-switch-to-the-new-branch)
+4. [Make Changes in Feature Branch](#4-make-changes-in-feature-branch)
+5. [Switch Back to Main](#5-switch-back-to-main)
+6. [Merge Feature Branch into Main](#6-merge-feature-branch-into-main)
+7. [Delete Feature Branch](#7-delete-feature-branch)
+8. [View All Branches](#8-view-all-branches)
+9. [Visual Diagram – Basic Branching](#9-visual-diagram--basic-branching)
+10. [Fast-Forward vs Merge Commit](#10-fast-forward-vs-merge-commit)
+11. [Merge vs Rebase](#11-merge-vs-rebase)
+12. [Real-World Developer Workflow](#12-real-world-developer-workflow)
+13. [PR / Code Review Flow](#13-pr--code-review-flow)
+14. [CI/CD Interaction with Branches](#14-cicd-interaction-with-branches)
+15. [Real Merge Conflict Scenario](#15-real-merge-conflict-scenario)
+16. [Real Rebase Conflict Scenario](#16-real-rebase-conflict-scenario)
+17. [Common Mistakes](#17-common-mistakes)
+18. [Best Practices](#18-best-practices)
+19. [Team Branching Strategies](#19-team-branching-strategies)
+20. [Final Mental Model](#20-final-mental-model)
 
 ---
 
-## 1. View Current Branch 
-
+## 1. View Current Branch
 
 ```bash
 git branch
-````
+```
 
 **Explanation:**
 
@@ -57,10 +48,9 @@ git branch
 
 <img width="275" height="184" alt="image" src="https://github.com/user-attachments/assets/3000020f-c43f-4b12-ad38-7b79fb2d97d5" />
 
-
 ---
 
-##  Create a New Branch
+## 2. Create a New Branch
 
 ```bash
 git branch feature-branch
@@ -74,13 +64,13 @@ git branch feature-branch
 
 ---
 
-##  Switch to the New Branch
+## 3. Switch to the New Branch
 
 ```bash
 git checkout feature-branch
 ```
 
-### Alternative (Git 2.23+)
+### 3.1 Alternative (Git 2.23+)
 
 ```bash
 git switch feature-branch
@@ -93,7 +83,7 @@ git switch feature-branch
 
 ---
 
-##  Make Changes in Feature Branch
+## 4. Make Changes in Feature Branch
 
 ```bash
 echo "Feature work" >> feature.txt
@@ -108,7 +98,7 @@ git commit -m "Added feature.txt in feature-branch"
 
 ---
 
-##  Switch Back to Main
+## 5. Switch Back to Main
 
 ```bash
 git checkout main
@@ -120,7 +110,7 @@ git checkout main
 
 ---
 
-##  Merge Feature Branch into Main
+## 6. Merge Feature Branch into Main
 
 ```bash
 git merge feature-branch
@@ -133,7 +123,7 @@ git merge feature-branch
 
 ---
 
-##  Delete Feature Branch
+## 7. Delete Feature Branch
 
 ```bash
 git branch -d feature-branch
@@ -145,7 +135,7 @@ git branch -d feature-branch
 
 ---
 
-##  View All Branches
+## 8. View All Branches
 
 ```bash
 git branch      # Local
@@ -154,9 +144,9 @@ git branch -a   # Local + Remote
 
 ---
 
-#  Visual Diagram – Basic Branching
+## 9. Visual Diagram – Basic Branching
 
-## Initial State
+### 9.1 Initial State
 
 ```
 main (HEAD)
@@ -164,7 +154,7 @@ main (HEAD)
 | Initial commit
 ```
 
-## Feature Branch Created
+### 9.2 Feature Branch Created
 
 ```
 main
@@ -174,7 +164,7 @@ main
   feature-branch (HEAD)
 ```
 
-## Commit on Feature Branch
+### 9.3 Commit on Feature Branch
 
 ```
 main
@@ -186,7 +176,7 @@ main
   | Added feature.txt
 ```
 
-## Merge into Main
+### 9.4 Merge into Main
 
 ```
 main (HEAD)
@@ -200,9 +190,9 @@ main (HEAD)
 
 ---
 
-#  Fast-Forward vs Merge Commit
+## 10. Fast-Forward vs Merge Commit
 
-## Fast-Forward
+### 10.1 Fast-Forward
 
 ```bash
 git merge feature-branch
@@ -221,9 +211,7 @@ main (HEAD)
 * No divergence
 * Pointer just moves forward
 
----
-
-## Merge Commit
+### 10.2 Merge Commit
 
 ```
 main (HEAD)
@@ -238,9 +226,9 @@ main (HEAD)
 
 ---
 
-#  Merge vs Rebase
+## 11. Merge vs Rebase
 
-## Merge (Safe for Teams)
+### 11.1 Merge (Safe for Teams)
 
 ```bash
 git merge feature-branch
@@ -249,7 +237,7 @@ git merge feature-branch
 * Preserves history
 * Preferred for shared branches
 
-## Rebase (Clean History)
+### 11.2 Rebase (Clean History)
 
 ```bash
 git checkout feature-branch
@@ -261,7 +249,7 @@ git rebase main
 
 ---
 
-#  Real-World Developer Workflow
+## 12. Real-World Developer Workflow
 
 ```bash
 git checkout -b login-feature
@@ -279,7 +267,7 @@ git branch -d login-feature
 
 ---
 
-#  PR / Code Review Flow
+## 13. PR / Code Review Flow
 
 ```bash
 git checkout -b feature/api-timeout
@@ -300,9 +288,9 @@ git push origin feature/api-timeout
 
 ---
 
-#  CI/CD Interaction with Branches
+## 14. CI/CD Interaction with Branches
 
-### Common Setup
+### 14.1 Common Setup
 
 | Branch    | CI/CD Action          |
 | --------- | --------------------- |
@@ -310,7 +298,7 @@ git push origin feature/api-timeout
 | main      | Test + build + deploy |
 | release/* | Test + staging deploy |
 
-### Example CI Rule
+### 14.2 Example CI Rule
 
 ```yaml
 on:
@@ -326,7 +314,7 @@ on:
 
 ---
 
-# 🔥 Real Merge Conflict Scenario
+## 15. Real Merge Conflict Scenario
 
 ```bash
 git merge feature-branch
@@ -342,7 +330,7 @@ timeout: 60
 >>>>>>> feature-branch
 ```
 
-### Resolution
+### 15.1 Resolution
 
 ```text
 timeout: 60
@@ -355,7 +343,7 @@ git commit -m "Resolve merge conflict"
 
 ---
 
-#  Real Rebase Conflict Scenario
+## 16. Real Rebase Conflict Scenario
 
 ```bash
 git checkout feature-branch
@@ -364,14 +352,14 @@ git rebase main
 
 Conflict appears.
 
-### Fix → Continue
+### 16.1 Fix → Continue
 
 ```bash
 git add config.yml
 git rebase --continue
 ```
 
-### Abort if needed
+### 16.2 Abort if needed
 
 ```bash
 git rebase --abort
@@ -379,36 +367,34 @@ git rebase --abort
 
 ---
 
-#  Common Mistakes
+## 17. Common Mistakes
 
-❌ Working directly on `main`
-❌ Rebasing shared branches
-❌ Huge long-running branches
+❌ Working directly on `main`  
+❌ Rebasing shared branches  
+❌ Huge long-running branches  
 ❌ Skipping PR reviews
 
-
 ---
 
-#  Best Practices
+## 18. Best Practices
 
-✔ One feature per branch
-✔ Small, frequent merges
-✔ PRs with CI checks
-✔ Delete merged branches
+✔ One feature per branch  
+✔ Small, frequent merges  
+✔ PRs with CI checks  
+✔ Delete merged branches  
 ✔ Merge > Rebase for teams
 
-
 ---
 
-#  Team Branching Strategies
+## 19. Team Branching Strategies
 
-## Git Flow
+### 19.1 Git Flow
 
 * `main` → production
 * `develop` → integration
 * Best for release-heavy orgs
 
-## Trunk-Based Development
+### 19.2 Trunk-Based Development
 
 * Single `main`
 * Short-lived branches
@@ -416,9 +402,8 @@ git rebase --abort
 
 ---
 
-##  Final Mental Model
+## 20. Final Mental Model
 
 <img width="218" height="231" alt="image" src="https://github.com/user-attachments/assets/d1dd88c9-89ca-400d-afa9-53d91155c6ad" />
-
 
 > **Branches are pointers, commits are immutable, merges reconcile truth, and CI enforces discipline.**
