@@ -5,12 +5,27 @@
 
 **GitPractice** is a hands-on repository for learning, practicing, and mastering **Git and GitHub**, from fundamentals to advanced, real-world workflows.
 
-This repo focuses on **how Git actually works**, not just commands.
-<img width="731" height="500" alt="image" src="https://github.com/user-attachments/assets/4ef88315-a424-4b72-afd8-a03ea133ffda" />
+This repo focuses on **how Git actually works**, not just commands. <img width="731" height="500" alt="image" src="https://github.com/user-attachments/assets/4ef88315-a424-4b72-afd8-a03ea133ffda" />
 
 ---
 
-## 📌 Project Overview
+## 📖 Table of Contents
+
+* [1. Project Overview](#1-project-overview)
+* [2. Repository Structure](#2-repository-structure)
+* [3. Engineering Review & Delivery Standards](#3-engineering-review--delivery-standards)
+
+  * [3.1 Engineering Docs & Guides](#31-engineering-docs--guides)
+* [4. Common Confusion: Git vs GitHub vs GitLab](#4-common-confusion-git-vs-github-vs-gitlab)
+* [5. Installation & Setup](#5-installation--setup)
+* [6. How to Use This Repository](#6-how-to-use-this-repository)
+* [7. Features](#7-features)
+* [8. Contributing](#8-contributing)
+* [9. License](#9-license)
+
+---
+
+## 1. Project Overview
 
 This repository helps you:
 
@@ -22,7 +37,7 @@ This repository helps you:
 
 ---
 
-## 🗂 Repository Structure
+## 2. Repository Structure
 
 ```
 GitPractice/
@@ -45,47 +60,48 @@ GitPractice/
 ├── disaster-recovery/    # Recovering from Git mistakes and failures
 ├── README.md             # Project documentation
 └── LICENSE               # MIT License
-
 ```
 
 > Folder names are intentionally **lowercase and hyphenated** for consistency and cross-platform compatibility.
 
 ---
-## 🏗 Engineering Review & Delivery Standards
 
-This section explains how pull requests, code reviews, and engineering workflows are Got it 👍
+## 3. Engineering Review & Delivery Standards
+
+This section explains how pull requests, code reviews, and engineering workflows are handled in professional teams.
+
 ---
 
-## 📚 Engineering Docs & Guides
+### 3.1 Engineering Docs & Guides
 
 These documents reflect **how Git, GitHub, and engineering practices are actually handled in real-world professional teams**.
 
-### 📄 Pull Request Guidelines
+#### 📄 Pull Request Guidelines
 
 `docs/pull-request-guidelines.md`
 How to create high-quality pull requests, conduct code reviews, handle approvals, and follow professional do’s & don’ts.
 
-### 🧠 Engineering Vocabulary
+#### 🧠 Engineering Vocabulary
 
 `docs/engineering-vocabulary.md`
 Common industry terms every software engineer should know when working with Git, GitHub, code reviews, and production systems.
 
-### 🏗 Engineering Foundations
+#### 🏗 Engineering Foundations
 
 `docs/engineering-foundations.md`
 Core engineering principles including ownership, production mindset, incident handling, rollback strategies, and trade-off analysis.
 
-### ⚡ Git & GitHub Shortcuts
+#### ⚡ Git & GitHub Shortcuts
 
 `docs/git-github-shortcuts.md`
 Common Git and GitHub shortcuts used in real-world projects, terminals, and daily developer workflows.
 
-### 🛠 Git Tools – Industry Guide
+#### 🛠 Git Tools – Industry Guide
 
 `docs/git-tools-industry-guide.md`
 A practical comparison of Git Bash, GitHub CLI, terminal tools, and what professionals actually use in day-to-day development.
 
-### 📝 GitHub Markdown Guide
+#### 📝 GitHub Markdown Guide
 
 `docs/github-markdown.md`
 Industry-grade GitHub Markdown standards for READMEs, documentation, pull requests, and issues.
@@ -94,42 +110,38 @@ Industry-grade GitHub Markdown standards for READMEs, documentation, pull reques
 
 These documents explain:
 
-- How PR reviews work in teams  
-- What reviewers expect  
-- How to give and receive feedback professionally  
-- How to think like a senior engineer in real-world projects  
-- How to handle incidents, rollbacks, and production issues  
+* How PR reviews work in teams
+* What reviewers expect
+* How to give and receive feedback professionally
+* How to think like a senior engineer in real-world projects
+* How to handle incidents, rollbacks, and production issues
 
 > Understanding PR reviews and engineering foundations is **mandatory** for real-world Git usage.
 
-
-
 <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/d4ffabc6-9b5f-499d-9e86-853baa9e9b7e" />
-
 
 ---
 
-## ❓ Common Confusion: Git vs GitHub vs GitLab
+## 4. Common Confusion: Git vs GitHub vs GitLab
 
-Many people confuse **Git**, **GitHub**, and **GitLab**.  
+Many people confuse **Git**, **GitHub**, and **GitLab**.
 This repository focuses primarily on **Git**, while demonstrating how it is used with platforms like GitHub and GitLab.
 
-| Tool | What it is |
-|----|----|
-| **Git** | A distributed version control system (runs locally) |
-| **GitHub** | A hosting & collaboration platform for Git |
-| **GitLab** | A DevOps platform built around Git |
+| Tool       | What it is                                          |
+| ---------- | --------------------------------------------------- |
+| **Git**    | A distributed version control system (runs locally) |
+| **GitHub** | A hosting & collaboration platform for Git          |
+| **GitLab** | A DevOps platform built around Git                  |
 
-> **Git manages history.  
-> GitHub manages collaboration.  
+> **Git manages history.
+> GitHub manages collaboration.
 > GitLab manages the software lifecycle.**
 
 If you understand **Git deeply**, switching between GitHub, GitLab, or any future tool becomes trivial.
 
-
 ---
 
-## ⚡ Installation & Setup
+## 5. Installation & Setup
 
 1. Clone the repository:
 
@@ -142,21 +154,20 @@ cd GitPractice
 
 ---
 
-## 🏃 How to Use This Repository
+## 6. How to Use This Repository
 
-This repository is structured to help you **learn Git step by step**. Here’s how to get the most out of it:
+This repository is structured to help you **learn Git step by step**:
 
-1. Each folder focuses on a **single Git concept** (e.g., `branching/`, `rebasing/`, `disaster-recovery/`).
-2. Start by following the **GitPractice roadmap** ([GitPractice Roadmap](gitpractice-roadmap.md)
-) to know **what to practice at each level**.
-3. Run Git commands locally to experiment with the examples and exercises.
-4. Modify files, commit changes, and **break things on purpose — then recover them** 💪. Mistakes are part of learning.
+1. Each folder focuses on a **single Git concept** (e.g., `branching/`, `rebasing/`, `disaster-recovery/`)
+2. Start by following the **GitPractice roadmap** ([GitPractice Roadmap](gitpractice-roadmap.md)) to know **what to practice at each level**
+3. Run Git commands locally to experiment with the examples and exercises
+4. Modify files, commit changes, and **break things on purpose — then recover them** 💪
 
-> **Tip:** Don’t just memorize commands — understand **what Git is doing behind the scenes**. This mindset is what separates beginners from confident Git users.
+> **Tip:** Don’t just memorize commands — understand **what Git is doing behind the scenes**.
 
 ---
 
-## 📈 Features
+## 7. Features
 
 * Beginner to intermediate Git coverage
 * Practical, real-world workflows (not academic theory)
@@ -166,7 +177,7 @@ This repository is structured to help you **learn Git step by step**. Here’s h
 
 ---
 
-## 🤝 Contributing
+## 8. Contributing
 
 Contributions are welcome!
 
@@ -190,7 +201,7 @@ Contributions are welcome!
 
 ---
 
-## 📝 License
+## 9. License
 
 This project is licensed under the **MIT License**.
 See the [LICENSE](LICENSE) file for details.
@@ -198,4 +209,6 @@ See the [LICENSE](LICENSE) file for details.
 ---
 
 Git is safest when you understand **how to recover**, not just how to commit.
+
+---
 
