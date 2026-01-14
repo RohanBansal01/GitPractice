@@ -57,7 +57,7 @@ How to:
 
 ---
 
-### 2.2 🧠 Engineering Vocabulary
+### 2.2  Engineering Vocabulary
 
 `engineering-vocabulary.md`
 
@@ -72,7 +72,7 @@ This helps you **communicate like a professional**, not just write code.
 
 ---
 
-### 2.3 🏗 Engineering Foundations
+### 2.3  Engineering Foundations
 
 `engineering-foundations.md`
 
@@ -87,7 +87,7 @@ This document focuses on **how engineers think**, not just what they type.
 
 ---
 
-### 2.4 ⚡ Git & GitHub Shortcuts
+### 2.4  Git & GitHub Shortcuts
 
 `git-github-shortcuts.md`
 
@@ -101,7 +101,7 @@ Designed for **speed and efficiency** in real projects.
 
 ---
 
-### 2.5 🛠 Git Tools – Industry Guide
+### 2.5  Git Tools – Industry Guide
 
 `git-tools-industry-guide.md`
 
@@ -115,7 +115,7 @@ Explains **what professionals actually use**, when, and why — not tool hype.
 
 ---
 
-### 2.6 📝 GitHub Markdown Guide
+### 2.6  GitHub Markdown Guide
 
 `github-markdown.md`
 
