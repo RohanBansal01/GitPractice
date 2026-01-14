@@ -183,10 +183,6 @@ git revert
 * Reflog is your best friend
 
 ---
-Here’s a **cleaned-up, more professional, senior-engineering version** of that section with better tone, clarity, and intent:
-
----
-
 ## 6. Additional Documentation / Reference Material
 
 To **master Git in a professional, team-based environment**, refer to the following **engineering reference documents**. These go beyond commands and focus on **workflow discipline, collaboration standards, and engineering culture**.
