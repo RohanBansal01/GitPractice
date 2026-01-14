@@ -117,7 +117,8 @@ Explains **what professionals actually use**, when, and why — not tool hype.
 
 ### 2.6  GitHub Markdown Guide
 
-`github-markdown.md`
+[github-markdown.md](github-markdown.md)
+
 
 Industry-grade GitHub Markdown standards for:
 - README files
