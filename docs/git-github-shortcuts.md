@@ -3,6 +3,8 @@
 Industry-ready reference for **Git aliases, terminal shortcuts, and GitHub UI keyboard shortcuts**.
 Designed for daily developer workflows and onboarding.
 
+<img width="289" height="175" alt="image" src="https://github.com/user-attachments/assets/3fd35848-7e38-4a66-bbd9-63a27907d63e" />
+
 ---
 
 ## 📚 Index
@@ -194,6 +196,8 @@ git amend
 ---
 
 ## 📌 7. Best Practices (Enterprise)
+
+<img width="225" height="225" alt="image" src="https://github.com/user-attachments/assets/337d8925-cccb-4200-899a-cd25753aedce" />
 
 ✅ Prefer **Git aliases** over shell aliases
 ✅ Keep aliases **documented** in repo
