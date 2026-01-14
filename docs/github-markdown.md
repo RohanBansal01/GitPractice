@@ -1,4 +1,4 @@
-# GitHub Markdown Cheatsheet (Industry-Grade)
+# GitHub Markdown 
 
 > A practical, **industry-used** Markdown reference for GitHub repositories, READMEs, PRs, issues, and documentation.
 
