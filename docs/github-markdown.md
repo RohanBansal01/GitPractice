@@ -316,5 +316,8 @@ owner/repo#45
 
 > Your README is often **the first interview impression** of your project.
 
+<img width="226" height="223" alt="image" src="https://github.com/user-attachments/assets/51120f40-b74a-40e3-9e9e-bfd596ac7d12" />
+
+
 ---
 
