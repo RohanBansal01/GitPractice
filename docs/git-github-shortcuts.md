@@ -111,6 +111,15 @@ gup  → git pull --rebase
 ```bash
 less ~/.oh-my-zsh/plugins/git/git.plugin.zsh
 ```
+Perfect idea 👍 — a **single clarifying line** is exactly what’s needed here.
+
+Put this **one line directly below** the command:
+
+```bash
+less ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+```
+> ℹ️ Read-only reference: opens the oh-my-zsh Git plugin source to **inspect existing aliases and helper logic**.
+
 
 ---
 
