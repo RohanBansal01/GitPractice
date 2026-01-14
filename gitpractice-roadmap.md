@@ -15,7 +15,7 @@ The goal is not memorizing commands, but **understanding what Git is doing and h
 3. [Level 3: Remote Workflows (Team-Ready)](#3-level-3-remote-workflows-team-ready)  
 4. [Level 4: Git Internals (Confidence Layer)](#4-level-4-git-internals-confidence-layer)  
 5. [Level 5: Disaster Recovery (Senior-Level)](#5-level-5-disaster-recovery-senior-level)  
-6. [Additional Documentation / Reference Docs](#6-additional-documentation--reference-docs)  
+6. [Additional Documentation / Reference Docs](#6-additional-documentation--reference-material)  
 7. [Final Mental Model](#7-final-mental-model)  
 8. [How to Use This Roadmap](#8-how-to-use-this-roadmap)  
 
@@ -202,15 +202,6 @@ To **master Git in a professional, team-based environment**, refer to the follow
 ```
 
 > These documents complement hands-on Git usage by establishing **PR culture, shared vocabulary, and a senior-level engineering mindset** required for real-world teams.
-
----
-
-If you want, I can also:
-
-* Make this **more beginner-friendly**, or
-* Make it **more strict / enterprise-grade**, or
-* Convert it into a **README.md section** that feels production-ready
-
 
 ---
 
