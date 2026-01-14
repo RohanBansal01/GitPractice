@@ -30,7 +30,10 @@ GitPractice/
 ├── docs/
 │   ├── pull-request-guidelines.md       # PR rules &  workflow
 │   ├── engineering-vocabulary.md        # Industry terms / Git vocabulary
-│   └── engineering-foundations.md       # Ownership, production mindset, incident handling, etc.
+│   ├── engineering-foundations.md       # Ownership, production mindset, incident handling, etc.
+│   ├── git-github-shortcuts.md          # Git & GitHub shortcuts
+│   ├── git-tools-industry-guide.md      # Git tools comparison (CLI, Bash, etc.)
+│   └── github-markdown.md               # GitHub Markdown standards
 ├── gitpractice-roadmap/  # Roadmap for how to follow this repo
 ├── basic-commands/       # Core Git commands and fundamentals
 ├── git-workflow/         # How Git workflows operate in real projects
@@ -50,20 +53,50 @@ GitPractice/
 ---
 ## 🏗 Engineering Review & Delivery Standards
 
-This section explains how pull requests, code reviews, and engineering workflows are handled in real-world professional teams.
+This section explains how pull requests, code reviews, and engineering workflows are Got it 👍
+You want to **add these 3 docs as part of your existing structure** (most likely under your **Learning / Docs / Engineering Foundations section** of the README), written in a **professional, real-world repo style**.
 
+Here’s a **clean, industry-grade Markdown snippet** you can directly paste into your README.
 
-- 📄 **Pull Request Guidelines**  
-  `docs/pull-request-guidelines.md`  
-  (How to create PRs, review code, approvals, do’s & don’ts)
+---
 
-- 🧠 **Engineering Vocabulary**  
-  `docs/engineering-vocabulary.md`  
-  (Common industry terms every Git/GitHub user should know)
+## 📚 Engineering Docs & Guides
 
-- 🏗 **Engineering Foundations**  
-  `docs/engineering-foundations.md`  
-  (Ownership, production mindset, incident handling, rollback strategies, trade-offs)
+These documents reflect **how Git, GitHub, and engineering practices are actually handled in real-world professional teams**.
+
+### 📄 Pull Request Guidelines
+
+`docs/pull-request-guidelines.md`
+How to create high-quality pull requests, conduct code reviews, handle approvals, and follow professional do’s & don’ts.
+
+### 🧠 Engineering Vocabulary
+
+`docs/engineering-vocabulary.md`
+Common industry terms every software engineer should know when working with Git, GitHub, code reviews, and production systems.
+
+### 🏗 Engineering Foundations
+
+`docs/engineering-foundations.md`
+Core engineering principles including ownership, production mindset, incident handling, rollback strategies, and trade-off analysis.
+
+---
+
+### ⚡ Git & GitHub Shortcuts
+
+`docs/git-github-shortcuts.md`
+Common Git and GitHub shortcuts used in real-world projects, terminals, and daily developer workflows.
+
+### 🛠 Git Tools – Industry Guide
+
+`docs/git-tools-industry-guide.md`
+A practical comparison of Git Bash, GitHub CLI, terminal tools, and what professionals actually use in day-to-day development.
+
+### 📝 GitHub Markdown Guide
+
+`docs/github-markdown.md`
+Industry-grade GitHub Markdown standards for READMEs, documentation, pull requests, and issues.
+
+---
 
 These documents explain:
 
