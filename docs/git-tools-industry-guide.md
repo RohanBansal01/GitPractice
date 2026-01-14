@@ -323,6 +323,3 @@ gh pr create
 > “I use Git via CLI (usually WSL or native terminal) and GitHub CLI for PRs, combined with IDE Git tools for daily work.”
 
 ---
-
-📌 **Author:** Rohan Bansal
-📦 **Audience:** Enterprise Developers, Backend Engineers, DevOps
