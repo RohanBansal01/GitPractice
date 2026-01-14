@@ -54,10 +54,6 @@ GitPractice/
 ## 🏗 Engineering Review & Delivery Standards
 
 This section explains how pull requests, code reviews, and engineering workflows are Got it 👍
-You want to **add these 3 docs as part of your existing structure** (most likely under your **Learning / Docs / Engineering Foundations section** of the README), written in a **professional, real-world repo style**.
-
-Here’s a **clean, industry-grade Markdown snippet** you can directly paste into your README.
-
 ---
 
 ## 📚 Engineering Docs & Guides
