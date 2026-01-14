@@ -6,6 +6,8 @@ These documents are designed to build:
 - Strong **engineering fundamentals**
 - Professional **collaboration habits**
 - A **production mindset**, not just command knowledge
+<img width="318" height="159" alt="image" src="https://github.com/user-attachments/assets/6587cc97-5347-4356-b019-de53c4bd5467" />
+
 
 ---
 
