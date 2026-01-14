@@ -13,12 +13,12 @@ These documents are designed to build:
 
 - [1. Engineering Review & Delivery Standards](#1-engineering-review--delivery-standards)
 - [2. Engineering Docs & Guides](#2-engineering-docs--guides)
-  - [2.1 Pull Request Guidelines](#21-pull-request-guidelines)
-  - [2.2 Engineering Vocabulary](#22-engineering-vocabulary)
-  - [2.3 Engineering Foundations](#23-engineering-foundations)
-  - [2.4 Git & GitHub Shortcuts](#24-git--github-shortcuts)
-  - [2.5 Git Tools – Industry Guide](#25-git-tools--industry-guide)
-  - [2.6 GitHub Markdown Guide](#26-github-markdown-guide)
+  - [2.1 Pull Request Guidelines](#21--pull-request-guidelines)
+  - [2.2 Engineering Vocabulary](#22--engineering-vocabulary)
+  - [2.3 Engineering Foundations](#23--engineering-foundations)
+  - [2.4 Git & GitHub Shortcuts](#24--git--github-shortcuts)
+  - [2.5 Git Tools – Industry Guide](#25--git-tools--industry-guide)
+  - [2.6 GitHub Markdown Guide](#26--github-markdown-guide)
 
 ---
 
