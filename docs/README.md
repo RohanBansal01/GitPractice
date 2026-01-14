@@ -46,7 +46,8 @@ Each file focuses on a specific aspect of professional engineering.
 
 ---
 
-### 2.1 📄 Pull Request Guidelines → [pull-request-guidelines.md](pull-request-guidelines.md)
+### 2.1  Pull Request Guidelines 
+→ [pull-request-guidelines.md](pull-request-guidelines.md)
 
 How to:
 - Create high-quality pull requests
@@ -57,7 +58,8 @@ How to:
 
 ---
 
-### 2.2 🧠 Engineering Vocabulary → [engineering-vocabulary.md](engineering-vocabulary.md)
+### 2.2  Engineering Vocabulary
+→ [engineering-vocabulary.md](engineering-vocabulary.md)
 
 Common industry terms every software engineer should know when working with:
 - Git & GitHub
@@ -70,7 +72,8 @@ This helps you **communicate like a professional**, not just write code.
 
 ---
 
-### 2.3 🏗 Engineering Foundations → [engineering-foundations.md](engineering-foundations.md)
+### 2.3  Engineering Foundations 
+→ [engineering-foundations.md](engineering-foundations.md)
 
 Core engineering principles including:
 - Ownership and accountability
@@ -83,7 +86,8 @@ This document focuses on **how engineers think**, not just what they type.
 
 ---
 
-### 2.4 ⚡ Git & GitHub Shortcuts → [git-github-shortcuts.md](git-github-shortcuts.md)
+### 2.4  Git & GitHub Shortcuts
+→ [git-github-shortcuts.md](git-github-shortcuts.md)
 
 A practical reference of:
 - Frequently used Git commands
@@ -95,7 +99,8 @@ Designed for **speed and efficiency** in real projects.
 
 ---
 
-### 2.5 🛠 Git Tools – Industry Guide → [git-tools-industry-guide.md](git-tools-industry-guide.md)
+### 2.5  Git Tools – Industry Guide
+→ [git-tools-industry-guide.md](git-tools-industry-guide.md)
 
 A comparison of tools such as:
 - Git Bash
@@ -107,7 +112,8 @@ Explains **what professionals actually use**, when, and why — not tool hype.
 
 ---
 
-### 2.6 📝 GitHub Markdown Guide → [github-markdown.md](github-markdown.md)
+### 2.6  GitHub Markdown Guide
+→ [github-markdown.md](github-markdown.md)
 
 Industry-grade GitHub Markdown standards for:
 - README files
