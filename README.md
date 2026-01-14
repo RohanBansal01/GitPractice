@@ -79,8 +79,6 @@ Common industry terms every software engineer should know when working with Git,
 `docs/engineering-foundations.md`
 Core engineering principles including ownership, production mindset, incident handling, rollback strategies, and trade-off analysis.
 
----
-
 ### ⚡ Git & GitHub Shortcuts
 
 `docs/git-github-shortcuts.md`
