@@ -62,13 +62,4 @@ Includes:
 
 ---
 
-## Recommended Learning Order
-
-1. interactive-platforms.md  
-2. youtube-playlists.md  
-3. official-documentation.md  
-4. cheat-sheets.md  
-5. git-tools.md  
-
----
 
