@@ -6,6 +6,7 @@ These videos are selected based on:
 - Practical hands-on teaching
 - Real-world workflow coverage
 - Beginner-friendly explanation
+<img width="237" height="213" alt="image" src="https://github.com/user-attachments/assets/fa381de6-a81c-440a-9744-5dedff244a9e" />
 
 ---
 
