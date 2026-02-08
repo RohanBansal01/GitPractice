@@ -242,6 +242,3 @@ See the [LICENSE](LICENSE) file for details.
 ---
 
 Git is safest when you understand how to recover, not just how to commit.
-
-```
-
