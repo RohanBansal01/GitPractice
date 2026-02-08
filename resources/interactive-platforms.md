@@ -4,6 +4,8 @@ This document contains some of the best interactive platforms to learn and pract
 
 These resources are highly recommended for beginners as well as developers who want to strengthen their Git workflow skills.
 
+<img width="260" height="194" alt="image" src="https://github.com/user-attachments/assets/327aec0d-024c-4b48-90c8-468196678bd8" />
+
 ---
 
 ## ⭐ Learn Git Branching (Best for Visual Practice)
@@ -33,6 +35,7 @@ These resources are highly recommended for beginners as well as developers who w
 ---
 
 ## 🎮 Oh My Git (Game-Based Git Learning)
+
 
 🔗 https://ohmygit.org/
 
