@@ -10,14 +10,15 @@ The goal is not memorizing commands, but **understanding what Git is doing and h
 
 ## 📚 Index
 
-1. [Level 1: Foundations (Beginner)](#1-level-1-foundations-beginner)  
-2. [Level 2: Branching & Local Workflows (Intermediate)](#2-level-2-branching--local-workflows-intermediate)  
-3. [Level 3: Remote Workflows (Team-Ready)](#3-level-3-remote-workflows-team-ready)  
-4. [Level 4: Git Internals (Confidence Layer)](#4-level-4-git-internals-confidence-layer)  
-5. [Level 5: Disaster Recovery (Senior-Level)](#5-level-5-disaster-recovery-senior-level)  
-6. [Additional Documentation / Reference Docs](#6-additional-documentation--reference-material)  
-7. [Final Mental Model](#7-final-mental-model)  
-8. [How to Use This Roadmap](#8-how-to-use-this-roadmap)  
+1. [Level 1: Foundations (Beginner)](#1-level-1-foundations-beginner)
+2. [Level 2: Branching & Local Workflows (Intermediate)](#2-level-2-branching--local-workflows-intermediate)
+3. [Level 3: Remote Workflows (Team-Ready)](#3-level-3-remote-workflows-team-ready)
+4. [Level 4: Git Internals (Confidence Layer)](#4-level-4-git-internals-confidence-layer)
+5. [Level 5: Disaster Recovery (Senior-Level)](#5-level-5-disaster-recovery-senior-level)
+6. [Additional Documentation / Reference Docs](#6-additional-documentation--reference-material)
+7. [Git Learning Resources](#7-git-learning-resources)
+8. [Final Mental Model](#8-final-mental-model)
+9. [How to Use This Roadmap](#9-how-to-use-this-roadmap)
 
 ---
 
@@ -27,8 +28,8 @@ The goal is not memorizing commands, but **understanding what Git is doing and h
 
 ### 1.1 Topics
 
-* What Git is (snapshot-based, not diff-based)  
-* Repository, working tree, staging area  
+* What Git is (snapshot-based, not diff-based)
+* Repository, working tree, staging area
 * Commits and commit history
 
 ### 1.2 Practice From Repo
@@ -48,8 +49,8 @@ git diff
 
 ### 1.4 You’re Ready to Move On When
 
-* You understand what a commit represents  
-* You know what is staged vs unstaged  
+* You understand what a commit represents
+* You know what is staged vs unstaged
 * You are not afraid of making commits
 
 ---
@@ -60,14 +61,14 @@ git diff
 
 ### 2.1 Topics
 
-* Branches as pointers  
-* Merging vs rebasing  
+* Branches as pointers
+* Merging vs rebasing
 * Conflict basics
 
 ### 2.2 Practice From Repo
 
-* `branching/`  
-* `rebasing/`  
+* `branching/`
+* `rebasing/`
 * `conflicts/`
 
 ### 2.3 Must-Know Commands
@@ -82,12 +83,12 @@ git cherry-pick
 
 ### 2.4 Common Mistakes to Learn From
 
-* Rebasing shared branches  
+* Rebasing shared branches
 * Resolving conflicts without understanding them
 
 ### 2.5 You’re Ready to Move On When
 
-* You can explain the difference between merge and rebase  
+* You can explain the difference between merge and rebase
 * You can fix a simple conflict calmly
 
 ---
@@ -98,8 +99,8 @@ git cherry-pick
 
 ### 3.1 Topics
 
-* Remotes and remote-tracking branches  
-* `fetch` vs `pull`  
+* Remotes and remote-tracking branches
+* `fetch` vs `pull`
 * Push safety rules
 
 ### 3.2 Practice From Repo
@@ -117,13 +118,13 @@ git push
 
 ### 3.4 Senior Rules
 
-* Prefer `fetch` over blind `pull`  
-* Never force-push to shared branches  
+* Prefer `fetch` over blind `pull`
+* Never force-push to shared branches
 * Always understand what you are pushing
 
 ### 3.5 You’re Ready to Move On When
 
-* You understand what `origin/main` really is  
+* You understand what `origin/main` really is
 * You can explain why a push was rejected
 
 ---
@@ -134,9 +135,9 @@ git push
 
 ### 4.1 Topics
 
-* `.git` directory  
-* Objects (commit, tree, blob)  
-* Refs, HEAD, detached HEAD  
+* `.git` directory
+* Objects (commit, tree, blob)
+* Refs, HEAD, detached HEAD
 * Reflog
 
 ### 4.2 Practice From Repo
@@ -149,7 +150,7 @@ git push
 
 ### 4.4 You’re Ready to Move On When
 
-* You understand that deleting commits usually means losing refs  
+* You understand that deleting commits usually means losing refs
 * You trust Git’s safety model
 
 ---
@@ -160,8 +161,8 @@ git push
 
 ### 5.1 Topics
 
-* Undoing bad rebases  
-* Recovering deleted commits  
+* Undoing bad rebases
+* Recovering deleted commits
 * Fixing broken branches
 
 ### 5.2 Practice From Repo
@@ -178,11 +179,12 @@ git revert
 
 ### 5.4 Senior Mindset
 
-* Mistakes are expected  
-* Recovery is a skill, not luck  
+* Mistakes are expected
+* Recovery is a skill, not luck
 * Reflog is your best friend
 
 ---
+
 ## 6. Additional Documentation / Reference Material
 
 To **master Git in a professional, team-based environment**, refer to the following **engineering reference documents**. These go beyond commands and focus on **workflow discipline, collaboration standards, and engineering culture**.
@@ -201,22 +203,97 @@ To **master Git in a professional, team-based environment**, refer to the follow
 
 ---
 
-## 7. Final Mental Model
+## 7. Git Learning Resources
 
-> **Git is safe by design.  
-> Commits are rarely lost.  
-> Most problems are pointer problems.  
+This folder contains **curated learning resources** to master Git and GitHub in an **industry-ready way**.
+
+The resources are organized into separate markdown files so you can follow them step-by-step.
+
+```
+├── resources/
+│   ├── interactive-platforms.md      # Best interactive Git learning websites
+│   ├── official-documentation.md     # Official Git & GitHub documentation links
+│   ├── youtube-playlists.md          # Best YouTube playlists (short + long courses)
+│   ├── git-tools.md                  # Industry tools used with Git for productivity
+│   └── cheat-sheets.md               # Git cheat sheets, PDFs, and command shortcuts
+```
+
+### 7.1 interactive-platforms.md
+
+Contains the best interactive websites to practice Git hands-on.
+
+**Examples:**
+
+* Learn Git Branching
+* Git Immersion
+* Oh My Git
+* GitHub Skills
+
+### 7.2 official-documentation.md
+
+Contains official Git and GitHub documentation links.
+
+**Examples:**
+
+* Git Official Docs
+* Pro Git Book
+* GitHub Docs
+
+### 7.3 youtube-playlists.md
+
+Contains the best free YouTube video courses (short + long duration) for Git and GitHub.
+
+**Examples:**
+
+* FreeCodeCamp Git Course
+* Shradha Khapra Git Tutorial
+* Tech with Jatin Masterclass
+* ThePrimeagen Git Course
+
+### 7.4 git-tools.md
+
+Contains industry tools used with Git for better productivity.
+
+**Includes:**
+
+* Git CLI tools
+* GUI tools
+* Merge conflict tools
+* IDE integrations
+* Hosting platforms
+* CI/CD tools
+
+### 7.5 cheat-sheets.md
+
+Contains Git cheat sheets and quick reference resources.
+
+**Includes:**
+
+* Command references
+* Shortcut guides
+* PDF cheat sheets
+* Most used Git commands
+
+---
+
+## 8. Final Mental Model
+
+> **Git is safe by design.
+> Commits are rarely lost.
+> Most problems are pointer problems.
 > If it happened locally, reflog remembers it.**
 
 Once this clicks, Git stops being scary.
 
 ---
 
-## 8. How to Use This Roadmap
+## 9. How to Use This Roadmap
 
-* Follow levels in order  
-* Practice, don’t rush  
-* Break things intentionally  
+* Follow levels in order
+* Practice, don’t rush
+* Break things intentionally
 * Recover them confidently
 
 This is how real Git mastery is built.
+
+---
