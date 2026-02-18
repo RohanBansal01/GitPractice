@@ -179,7 +179,7 @@ This repository is structured to help you learn Git step by step:
 1. Each folder focuses on a single Git concept (example: `branching/`, `rebasing/`, `disaster-recovery/`)
 2. Start by following the GitPractice roadmap:
 
-   * [GitPractice Roadmap](gitpractice-roadmap/README.md)
+   * [GitPractice Roadmap](gitpractice-roadmap.md)
 3. Run Git commands locally to experiment with the examples and exercises
 4. Modify files, commit changes, and break things on purpose, then recover them
 
