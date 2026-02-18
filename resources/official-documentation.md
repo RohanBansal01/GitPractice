@@ -29,6 +29,9 @@ These resources are the most trusted and recommended when you want accurate and 
 
 📌 Recommended for: **Beginner → Advanced**
 
+<img width="1280" height="1280" alt="image" src="https://github.com/user-attachments/assets/5940154b-4520-49d4-ad74-53ae442e64d3" />
+
+
 ---
 
 ## 🐙 GitHub Official Documentation
