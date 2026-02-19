@@ -128,7 +128,7 @@ Ensures your documentation looks **clean, consistent, and professional**.
 ---
 
 ### 2.7  Ticketing Workflow Guide (JIRA, Azure DevOps, ServiceNow, GitHub Issues)
-→ [ticketing-workflow-guide.md](ticketing-workflow-guide.md)
+→ [ticketing-workflow-guide.md](tickets-and-issue-tracking.md)
 
 A professional guide covering how companies manage software work using ticketing platforms.
 
