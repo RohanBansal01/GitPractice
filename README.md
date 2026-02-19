@@ -50,7 +50,8 @@ GitPractice/
 │   ├── engineering-foundations.md
 │   ├── git-github-shortcuts.md
 │   ├── git-tools-industry-guide.md
-│   └── github-markdown.md
+│   ├── github-markdown.md
+│   └── tickets-and-issue-tracking.md
 │
 ├── gitpractice-roadmap/
 ├── basic-commands/
@@ -123,6 +124,12 @@ A practical comparison of Git Bash, GitHub CLI, terminal tools, and what profess
 → [docs/github-markdown.md](docs/github-markdown.md)
 
 Industry-grade GitHub Markdown standards for READMEs, documentation, pull requests, and issues.
+
+#### 🎫 Ticketing Workflow Guide (JIRA, Azure DevOps, ServiceNow, GitHub Issues)
+
+→ [docs/tickets-and-issue-tracking.md](docs/tickets-and-issue-tracking.md)
+
+Explains how ticketing systems work in real companies, including ticket lifecycle, types, priority vs severity, and how tickets connect with branches, commits, PRs, QA, and releases.
 
 ---
 
@@ -242,3 +249,4 @@ See the [LICENSE](LICENSE) file for details.
 ---
 
 Git is safest when you understand how to recover, not just how to commit.
+
