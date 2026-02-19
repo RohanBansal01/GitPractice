@@ -21,6 +21,7 @@ These documents are designed to build:
     - [2.4 Git & GitHub Shortcuts](#24--git--github-shortcuts)
     - [2.5 Git Tools – Industry Guide](#25--git-tools--industry-guide)
     - [2.6 GitHub Markdown Guide](#26--github-markdown-guide)
+    - [2.7 Ticketing Workflow Guide (JIRA, Azure DevOps, ServiceNow, GitHub Issues)](#27--ticketing-workflow-guide-jira-azure-devops-servicenow-github-issues)
 
 ---
 
@@ -123,6 +124,23 @@ Industry-grade GitHub Markdown standards for:
 - Engineering notes
 
 Ensures your documentation looks **clean, consistent, and professional**.
+
+---
+
+### 2.7  Ticketing Workflow Guide (JIRA, Azure DevOps, ServiceNow, GitHub Issues)
+→ [ticketing-workflow-guide.md](ticketing-workflow-guide.md)
+
+A professional guide covering how companies manage software work using ticketing platforms.
+
+Explains:
+- What tickets are and why they matter
+- Types of tickets (Bug, Story, Task, Epic, Incident)
+- Priority vs severity concepts
+- Ticket lifecycle and workflow states
+- How tickets connect with Git branches, commits, and PRs
+- Industry-standard ticket → branch → PR → release workflow
+
+This document helps you understand **real-world engineering delivery pipelines** used in companies.
 
 ---
 
