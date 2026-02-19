@@ -191,12 +191,13 @@ To **master Git in a professional, team-based environment**, refer to the follow
 
 ```
 ├── docs/
-│   ├── pull-request-guidelines.md    # PR rules, review standards, and workflow
-│   ├── engineering-vocabulary.md     # Common industry and Git terminology
-│   ├── engineering-foundations.md    # Ownership, production mindset, incident handling
-│   ├── git-github-shortcuts.md       # Frequently used Git & GitHub shortcuts
-│   ├── git-tools-industry-guide.md   # Comparison of Git tools (CLI, GUIs, Bash, etc.)
-│   └── github-markdown.md            # GitHub-flavored Markdown standards
+│   ├── pull-request-guidelines.md        # PR rules, review standards, and workflow
+│   ├── engineering-vocabulary.md         # Common industry and Git terminology
+│   ├── engineering-foundations.md        # Ownership, production mindset, incident handling
+│   ├── git-github-shortcuts.md           # Frequently used Git & GitHub shortcuts
+│   ├── git-tools-industry-guide.md       # Comparison of Git tools (CLI, GUIs, Bash, etc.)
+│   ├── github-markdown.md                # GitHub-flavored Markdown standards
+│   └── tickets-and-issue-tracking.md     # Ticketing systems, issue tracking, and workflow
 ```
 
 > These documents complement hands-on Git usage by establishing **PR culture, shared vocabulary, and a senior-level engineering mindset** required for real-world teams.
