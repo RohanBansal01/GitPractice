@@ -61,6 +61,26 @@ These resources are extremely useful for revision, interviews, and daily Git usa
 
 ---
 
+## ⭐ Oh Shit, Git!? (Real-Life Debugging Guide)
+
+🔗 [https://ohshitgit.com/](https://ohshitgit.com/)
+
+**Why recommended:**
+
+* Focuses on *real mistakes developers make*
+* Gives exact commands to fix Git disasters
+* Extremely useful when you’re stuck (not just learning)
+* Covers scenarios like:
+
+  * Committed to wrong branch
+  * Messed up rebase
+  * Deleted something important
+  * Broken history
+
+📌 Recommended for: **Intermediate → Advanced (Must-have for real work)**
+
+---
+
 ##  Suggested Usage
 
 - Keep one cheat sheet open while practicing Git commands  
